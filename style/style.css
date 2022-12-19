@@ -1,0 +1,30 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 114rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 1.6rem;
+  box-sizing: border-box;
+}
+
+.profilPicture__container {
+  width: 30rem;
+  height: 30rem;
+}
+
+.profilePicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}

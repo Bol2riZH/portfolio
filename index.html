@@ -16,37 +16,33 @@
   </head>
   <body>
     <main>
-      <header>
-        <h1>Welcome to My Website</h1>
-        <nav>
-          <ul>
-            <li>À propos</li>
-            <li>Projets</li>
-            <li>Contact</li>
+      <header class="header">
+        <h1 class="title">
+          <span class="title__firstname">MATTHIEU</span>
+          <span class="title__lastname">REUNGOAT</span>
+        </h1>
+        <nav class="navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item"><a href="#about">À propos</a></li>
+            <li class="navigation__item"><a href="#project">Projets</a></li>
+            <li class="navigation__item"><a href="#contact">Contact</a></li>
           </ul>
         </nav>
-        <div class="profilPicture__container">
-          <img
-            src="assets/images/IMG_5696.JPEG"
-            alt="portrait"
-            class="profilePicture"
-          />
-        </div>
       </header>
 
-      <section id="about" class="about">
-        <h2 class="section-title">À propos</h2>
+      <section id="about" class="section section__about">
+        <h2 class="section__title">À propos</h2>
       </section>
-      <section id="project" class="project">
-        <h2 class="section-title">Projets</h2>
+      <section id="project" class="section section__project">
+        <h2 class="section__title">Projets</h2>
       </section>
-      <section id="contact" class="contact">
-        <h2 class="section-title">Contact</h2>
+      <section id="contact" class="section section__contact">
+        <h2 class="section__title">Contact</h2>
       </section>
 
-      <footer>
-        <p>copyright Matthieu REUNGOAT</p>
-      </footer>
+      <!--      <footer>-->
+      <!--        <p>copyright Matthieu REUNGOAT</p>-->
+      <!--      </footer>-->
     </main>
     <script defer src="index.js"></script>
   </body>

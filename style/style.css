@@ -6,25 +6,120 @@
   box-sizing: inherit;
 }
 
+:root {
+  --primary-color: #fe4a49;
+  --secondary-color: #fed766;
+  --tertiary-color: #009fb7;
+
+  /*--primary-color: #fe4a49;*/
+  /*--secondary-color: #009fb7;*/
+  /*--tertiary-color: #fed766;*/
+
+  /*--primary-color: #fed766;*/
+  /*--secondary-color: #fe4a49;*/
+  /*--tertiary-color: #009fb7;*/
+
+  /*--primary-color: #fed766;*/
+  /*--secondary-color: #009fb7;*/
+  /*--tertiary-color: #fe4a49;*/
+
+  /*--primary-color: #009fb7;*/
+  /*--secondary-color: #fe4a49;*/
+  /*--tertiary-color: #fed766;*/
+
+  /*--primary-color: #009fb7;*/
+  /*--secondary-color: #fed766;*/
+  /*--tertiary-color: #fe4a49;*/
+
+  --primary-color-dark-1: #510000;
+  --secondary-color-dark-1: #513d00;
+  --tertiary-color-dark-1: #004752;
+
+  --light-color: #fff;
+  --dark-color: #000;
+
+  --font-size-small: 1.2rem;
+  --font-size-medium: 1.6rem;
+  --font-size-big: 1.8rem;
+  --font-size-title-h1: 8rem;
+}
+
 html {
   font-size: 62.5%;
+  background-color: var(--primary-color);
 }
 
 body {
   max-width: 114rem;
-  font-family: "JetBrains Mono", monospace;
-  font-size: 1.6rem;
+  margin: 0 auto;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: var(--font-size-medium);
+  color: var(--light-color);
   box-sizing: border-box;
 }
 
-.profilPicture__container {
-  width: 30rem;
-  height: 30rem;
+::selection {
+  background-color: var(--tertiary-color);
+  color: var(--light-color);
 }
 
-.profilePicture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
+li {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  color: var(--light-color);
+  text-decoration: none;
+}
+
+.navigation__item {
+  transition: all 200ms;
+}
+
+.navigation__item:hover {
+  translate: 0.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 2rem;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-title-h1);
+  color: var(--secondary-color);
+  text-shadow: 0.6rem 0 var(--tertiary-color);
+}
+
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section {
+  height: 100vh;
+}
+
+#about,
+#project,
+#contact {
+  display: none;
+}
+
+#about:target {
+  display: flex;
+}
+
+#project:target {
+  display: flex;
+}
+
+#contact:target {
+  display: flex;
 }

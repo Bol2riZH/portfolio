@@ -104,13 +104,15 @@ a:visited {
 
 .section {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-#about,
-#project,
-#contact {
-  display: none;
-}
+/*#about,*/
+/*#project,*/
+/*#contact {*/
+/*  display: none;*/
+/*}*/
 
 #about:target {
   display: flex;

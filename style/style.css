@@ -37,23 +37,29 @@
 
   --light-color: #fff;
   --dark-color: #000;
+  --background-color: #191717;
 
   --font-size-small: 1.2rem;
-  --font-size-medium: 1.6rem;
-  --font-size-big: 1.8rem;
-  --font-size-title-h1: 8rem;
+  --font-size-normal: 1.6rem;
+  --font-size-medium: 2rem;
+  --font-size-big: 2.4rem;
+  --font-size-XXL: 8rem;
+}
+
+.center {
+  max-width: 144rem;
+  margin: 0 auto;
 }
 
 html {
   font-size: 62.5%;
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
 }
 
 body {
-  max-width: 114rem;
   margin: 0 auto;
   font-family: 'JetBrains Mono', monospace;
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-normal);
   color: var(--light-color);
   box-sizing: border-box;
 }
@@ -83,17 +89,18 @@ a:visited {
 
 .header {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 1rem 2rem;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
 }
 
-.title {
+.name {
   display: flex;
   flex-direction: column;
-  font-size: var(--font-size-title-h1);
+  font-size: var(--font-size-XXL);
+  font-weight: 900;
   color: var(--secondary-color);
-  text-shadow: 0.6rem 0 var(--tertiary-color);
+  text-shadow: -0.6rem 0 0 var(--primary-color);
 }
 
 .navigation__list {
@@ -102,26 +109,23 @@ a:visited {
   gap: 2rem;
 }
 
-.section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+.section__myself {
 }
 
-/*#about,*/
-/*#project,*/
-/*#contact {*/
-/*  display: none;*/
-/*}*/
-
-#about:target {
+.section__about {
   display: flex;
+  flex-direction: row;
 }
 
-#project:target {
-  display: flex;
+.section__about--paragraphe {
+  flex: 0 0 50%;
 }
 
-#contact:target {
-  display: flex;
+.img {
+  width: 50rem;
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
 }

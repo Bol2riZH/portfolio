@@ -43,7 +43,20 @@ a:link {
   color: #fff;
 }
 
+.header {
+  padding: 0 5rem;
+}
+.header__heading-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fed766;
+  text-shadow: -0.4rem 0 0 #fe4a49;
+}
+
 .heading-primary {
+  color: #fed766;
   font-size: 5rem;
   font-weight: 900;
   line-height: 1;
@@ -52,18 +65,19 @@ a:link {
   margin-bottom: 3rem;
 }
 
+.heading-secondary {
+  color: #fed766;
+  font-size: 5rem;
+  font-weight: 900;
+}
+
+.section__about--paragraphe {
+  font-family: "Catamaran Thin", sans-serif;
+}
+
 .center {
   max-width: 144rem;
   margin: 0 auto;
-}
-
-.header__heading-title {
-  display: flex;
-  flex-direction: column;
-  font-size: 8rem;
-  font-weight: 900;
-  color: #fed766;
-  text-shadow: -0.6rem 0 0 #fe4a49;
 }
 
 .navigation {
@@ -85,27 +99,28 @@ a:link {
 
 .section {
   max-width: 114rem;
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
 }
 .section__myself {
   background-image: linear-gradient(to right bottom, transparent 0, transparent 65%, #fed766 65%);
   display: flex;
   justify-content: space-between;
-  padding: 5rem;
+}
+.section__myself--container {
+  padding: 5rem 0;
 }
 .section__myself--img {
-  width: 30rem;
+  width: 35rem;
+  padding: 5rem;
 }
 .section__myself--img img {
   width: 100%;
   object-fit: cover;
 }
-.section__about {
+.section__about--qualities {
   display: flex;
-  flex-direction: row;
-}
-.section__about--paragraphe {
-  flex: 0 0 50%;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

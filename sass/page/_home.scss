@@ -2,7 +2,8 @@
 
 .section {
   max-width: 114rem;
-  margin: 0 auto;
+  margin: 0 auto 5rem auto;
+
   &__myself {
     background-image: linear-gradient(
       to right bottom,
@@ -12,10 +13,14 @@
     );
     display: flex;
     justify-content: space-between;
-    padding: 5rem;
+
+    &--container {
+      padding: 5rem 0;
+    }
 
     &--img {
-      width: 30rem;
+      width: 35rem;
+      padding: 5rem;
       img {
         width: 100%;
         object-fit: cover;
@@ -24,11 +29,10 @@
   }
 
   &__about {
-    display: flex;
-    flex-direction: row;
-
-    &--paragraphe {
-      flex: 0 0 50%;
+    &--qualities {
+      display: flex;
+      gap: 2rem;
+      margin: 2rem 0;
     }
   }
 }

@@ -13,11 +13,34 @@ a:link {
   color: variables.$color-white;
 }
 
+.header {
+  padding: 0 5rem;
+  &__heading-title {
+    display: flex;
+    flex-direction: column;
+    font-size: variables.$XXL-font-size;
+    font-weight: 900;
+    color: variables.$color-secondary;
+    text-shadow: -0.4rem 0 0 variables.$color-primary;
+  }
+}
+
 .heading-primary {
+  color: variables.$color-secondary;
   font-size: variables.$large-font-size;
   font-weight: 900;
   line-height: 1;
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
+}
+
+.heading-secondary {
+  color: variables.$color-secondary;
+  font-size: variables.$large-font-size;
+  font-weight: 900;
+}
+
+.section__about--paragraphe {
+  font-family: 'Catamaran Thin', sans-serif;
 }

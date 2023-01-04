@@ -1,12 +1,1 @@
 @use '../abstract/variables';
-
-.header {
-  &__heading-title {
-    display: flex;
-    flex-direction: column;
-    font-size: variables.$XXL-font-size;
-    font-weight: 900;
-    color: variables.$color-secondary;
-    text-shadow: -0.6rem 0 0 variables.$color-primary;
-  }
-}

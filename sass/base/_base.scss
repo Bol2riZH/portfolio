@@ -18,6 +18,11 @@ body {
   background-color: variables.$color-background;
 }
 
+::selection {
+  background-color: variables.$color-tertiary;
+  color: variables.$color-white;
+}
+
 li {
   list-style-type: none;
 }

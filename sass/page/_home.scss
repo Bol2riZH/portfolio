@@ -1,10 +1,21 @@
+@use '../abstract/variables';
+
 .section {
+  max-width: 114rem;
+  margin: 0 auto;
   &__myself {
+    background-image: linear-gradient(
+      to right bottom,
+      transparent 0,
+      transparent 65%,
+      variables.$color-secondary 65%
+    );
     display: flex;
+    justify-content: space-between;
+    padding: 5rem;
 
     &--img {
-      width: 50rem;
-
+      width: 30rem;
       img {
         width: 100%;
         object-fit: cover;

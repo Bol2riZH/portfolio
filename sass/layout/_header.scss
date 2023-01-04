@@ -1,12 +1,7 @@
 @use '../abstract/variables';
 
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 2rem 5rem;
-
-  &__title {
+  &__heading-title {
     display: flex;
     flex-direction: column;
     font-size: variables.$XXL-font-size;

@@ -12,3 +12,12 @@ a:visited,
 a:link {
   color: variables.$color-white;
 }
+
+.heading-primary {
+  font-size: variables.$large-font-size;
+  font-weight: 900;
+  line-height: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}

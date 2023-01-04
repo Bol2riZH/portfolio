@@ -1,0 +1,23 @@
+.section {
+  &__myself {
+    display: flex;
+
+    &--img {
+      width: 50rem;
+
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__about {
+    display: flex;
+    flex-direction: row;
+
+    &--paragraphe {
+      flex: 0 0 50%;
+    }
+  }
+}

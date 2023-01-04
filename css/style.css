@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0 auto;
+  box-sizing: border-box;
+  background-color: #191717;
+}
+
+li {
+  list-style-type: none;
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+body {
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+a:visited,
+a:link {
+  color: #fff;
+}
+
+.center {
+  max-width: 144rem;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+.header__title {
+  display: flex;
+  flex-direction: column;
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fed766;
+  text-shadow: -0.6rem 0 0 #fe4a49;
+}
+
+.navigation {
+  position: fixed;
+}
+.navigation__item {
+  transition: all 200ms;
+}
+.navigation__item:hover {
+  translate: 0.5rem;
+}
+.navigation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.section__myself {
+  display: flex;
+}
+.section__myself--img {
+  width: 50rem;
+}
+.section__myself--img img {
+  width: 100%;
+  object-fit: cover;
+}
+.section__about {
+  display: flex;
+  flex-direction: row;
+}
+.section__about--paragraphe {
+  flex: 0 0 50%;
+}
+
+/*# sourceMappingURL=style.css.map */

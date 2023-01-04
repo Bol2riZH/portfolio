@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Matthieu REUNGOAT - portfolio</title>
-    <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,30 +15,31 @@
     <!--    <link rel="icon" href="./favicon.ico" type="image/x-icon">-->
   </head>
   <body>
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">À propos</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#project" class="navigation__link">Projets</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
     <header class="header">
-      <span class="name">MATTHIEU REUNGOAT</span>
-      <nav class="navigation">
-        <ul class="navigation__list">
-          <li class="navigation__item">
-            <a href="#about" class="navigation__link">À propos</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#project" class="navigation__link">Projets</a>
-          </li>
-          <li class="navigation__item">
-            <a href="#contact" class="navigation__link">Contact</a>
-          </li>
-        </ul>
-      </nav>
+      <span class="header__title">MATTHIEU REUNGOAT</span>
     </header>
 
     <main class="main">
       <section class="section__myself center">
-        <h1 class="job-title">
+        <h1 class="section__myself--job-title">
           <span>Développeur</span>
           <span>Web.</span>
         </h1>
-        <div class="img">
+        <div class="section__myself--img">
           <img src="assets/images/IMG_5696.JPEG" alt="profil" />
         </div>
       </section>

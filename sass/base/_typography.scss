@@ -1,0 +1,14 @@
+@use '../abstract/variables';
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 400;
+  line-height: 1.7;
+  font-size: variables.$default-font-size;
+  color: variables.$color-white;
+}
+
+a:visited,
+a:link {
+  color: variables.$color-white;
+}

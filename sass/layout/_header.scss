@@ -1,0 +1,17 @@
+@use '../abstract/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-size: variables.$XXL-font-size;
+    font-weight: 900;
+    color: variables.$color-secondary;
+    text-shadow: -0.6rem 0 0 variables.$color-primary;
+  }
+}

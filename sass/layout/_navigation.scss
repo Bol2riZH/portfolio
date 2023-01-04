@@ -1,0 +1,15 @@
+.navigation {
+  position: fixed;
+  &__item {
+    transition: all 200ms;
+    &:hover {
+      translate: 0.5rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

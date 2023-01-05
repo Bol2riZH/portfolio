@@ -217,32 +217,35 @@
             <input
               type="text"
               class="form__input"
-              placeholder="Full Name"
+              placeholder="Entrez votre nom"
               required
               id="name"
             />
-            <label for="name" class="form__label">Nom / société</label>
+            <label for="name" class="form__label">Nom</label>
           </div>
 
           <div class="form__group">
             <input
               type="email"
               class="form__input"
-              placeholder="Email address"
+              placeholder="Entrez votre adresse email"
               required
               id="email"
             />
             <label for="email" class="form__label">Adresse email</label>
           </div>
           <div class="form__group">
-            <input
-              type="text"
+            <textarea
               class="form__input"
-              placeholder="Email address"
-              required
               id="message"
-            />
-            <label for="message" class="form__label">Message</label>
+              name="message"
+              placeholder="Votre message"
+            >
+            </textarea>
+            <label for="message" class="form__label"></label>
+          </div>
+          <div class="form__group">
+            <button class="btn">Envoyer &rarr;</button>
           </div>
         </form>
       </section>

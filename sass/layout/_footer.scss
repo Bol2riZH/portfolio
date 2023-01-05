@@ -1,12 +1,10 @@
 @use '../abstract/variables';
 
 .footer {
-  &__contact {
-    &--list {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-    }
+  &__list {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
 
   &__copyright {

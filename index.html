@@ -97,7 +97,7 @@
         </div>
       </section>
       <section id="project" class="section section-project">
-        <h2 class="heading-secondary">Réalisations</h2>
+        <h2 class="heading-secondary">Mes réalisations</h2>
         <ul class="project__list">
           <li class="card">
             <a
@@ -211,43 +211,47 @@
       </section>
 
       <section id="contact" class="section section-contact">
-        <form action="#" class="form">
-          <h2 class="heading-secondary">Contact</h2>
-          <div class="form__group">
-            <input
-              type="text"
-              class="form__input"
-              placeholder="Entrez votre nom"
-              required
-              id="name"
-            />
-            <label for="name" class="form__label">Nom</label>
-          </div>
+        <h2 class="heading-secondary">Envoyez moi un message !</h2>
+        <div class="contact">
+          <form action="#" class="form">
+            <div class="form__group">
+              <input
+                type="text"
+                class="form__input"
+                placeholder="Entrez votre nom"
+                required
+                id="name"
+              />
+              <label for="name" class="form__label">Nom</label>
+            </div>
+            <div class="form__group">
+              <input
+                type="email"
+                class="form__input"
+                placeholder="Entrez votre adresse email"
+                required
+                id="email"
+              />
+              <label for="email" class="form__label">Adresse email</label>
+            </div>
 
-          <div class="form__group">
-            <input
-              type="email"
-              class="form__input"
-              placeholder="Entrez votre adresse email"
-              required
-              id="email"
-            />
-            <label for="email" class="form__label">Adresse email</label>
-          </div>
-          <div class="form__group">
-            <textarea
-              class="form__input"
-              id="message"
-              name="message"
-              placeholder="Votre message"
-            >
-            </textarea>
-            <label for="message" class="form__label"></label>
-          </div>
-          <div class="form__group">
-            <button class="btn">Envoyer &rarr;</button>
-          </div>
-        </form>
+            <div class="form__group">
+              <textarea
+                class="form__input"
+                id="message"
+                name="message"
+                placeholder="Entrez votre message"
+                rows="8"
+              ></textarea>
+              <label for="message" class="form__label"></label>
+            </div>
+
+            <div class="form__group u-margin-top-small">
+              <button class="btn">Envoyer</button>
+            </div>
+          </form>
+          <div class="contact__illustration"></div>
+        </div>
       </section>
     </main>
 

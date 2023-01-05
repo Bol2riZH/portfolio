@@ -1,0 +1,19 @@
+@use '../abstract/variables';
+
+.btn {
+  width: fit-content;
+  padding: 1.5rem 3rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: variables.$color-secondary;
+  border-radius: 2px;
+  font-size: variables.$medium-font-size;
+  transition: all 250ms;
+  &:hover {
+    cursor: pointer;
+    border-radius: 17px;
+  }
+  &:active {
+    translate: 0 0.2rem;
+  }
+}

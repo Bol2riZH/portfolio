@@ -57,7 +57,7 @@ a:link {
 
 .heading-primary {
   color: #fed766;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 900;
   line-height: 1;
   display: flex;
@@ -67,10 +67,11 @@ a:link {
 
 .heading-secondary {
   color: #fed766;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 900;
 }
 
+.section__myself--paragraphe,
 .section__about--paragraphe {
   font-family: "Catamaran Thin", sans-serif;
 }
@@ -78,6 +79,10 @@ a:link {
 .center {
   max-width: 144rem;
   margin: 0 auto;
+}
+
+.color-black {
+  color: #191717;
 }
 
 .navigation {
@@ -101,13 +106,16 @@ a:link {
   max-width: 114rem;
   margin: 0 auto 5rem auto;
 }
-.section__myself {
-  background-image: linear-gradient(to right bottom, transparent 0, transparent 65%, #fed766 65%);
+.section__myself--top-container {
   display: flex;
   justify-content: space-between;
-}
-.section__myself--container {
+  align-items: center;
   padding: 5rem 0;
+  background-image: linear-gradient(to right bottom, transparent 0, transparent 65%, #fed766 65%);
+}
+.section__myself--top-container--left {
+  display: flex;
+  flex-direction: column;
 }
 .section__myself--img {
   width: 35rem;
@@ -117,10 +125,31 @@ a:link {
   width: 100%;
   object-fit: cover;
 }
-.section__about--qualities {
+.section__myself--qualities {
   display: flex;
   gap: 2rem;
   margin: 2rem 0;
+}
+.section__about--container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section__about--paragraphe {
+  max-width: 40%;
+}
+.section__about--illustration {
+  width: 70rem;
+  height: 50rem;
+  background-color: #009fb7;
+}
+.section__project--list {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.section__project--item {
+  background-color: #009fb7;
 }
 
 /*# sourceMappingURL=style.css.map */

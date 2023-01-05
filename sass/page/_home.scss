@@ -5,17 +5,22 @@
   margin: 0 auto 5rem auto;
 
   &__myself {
-    background-image: linear-gradient(
-      to right bottom,
-      transparent 0,
-      transparent 65%,
-      variables.$color-secondary 65%
-    );
-    display: flex;
-    justify-content: space-between;
-
-    &--container {
+    &--top-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
       padding: 5rem 0;
+
+      background-image: linear-gradient(
+        to right bottom,
+        transparent 0,
+        transparent 65%,
+        variables.$color-secondary 65%
+      );
+      &--left {
+        display: flex;
+        flex-direction: column;
+      }
     }
 
     &--img {
@@ -26,13 +31,39 @@
         object-fit: cover;
       }
     }
-  }
 
-  &__about {
     &--qualities {
       display: flex;
       gap: 2rem;
       margin: 2rem 0;
+    }
+  }
+
+  &__about {
+    &--container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    &--paragraphe {
+      max-width: 40%;
+    }
+    &--illustration {
+      width: 70rem;
+      height: 50rem;
+      background-color: variables.$color-tertiary;
+    }
+  }
+
+  &__project {
+    &--list {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    &--item {
+      background-color: variables.$color-tertiary;
     }
   }
 }

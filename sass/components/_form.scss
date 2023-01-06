@@ -2,10 +2,11 @@
 
 .form {
   margin-top: 2rem;
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+
   &__input {
     font-family: inherit;
     color: variables.$color-grey-dark-4;

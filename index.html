@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Matthieu REUNGOAT - portfolio</title>
+
+    <script
+      src="https://kit.fontawesome.com/056befc51e.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +17,7 @@
       rel="stylesheet"
     />
     <!--    <link rel="icon" href="./favicon.ico" type="image/x-icon">-->
+    <title>Matthieu REUNGOAT - portfolio</title>
   </head>
   <body>
     <nav class="navigation">
@@ -63,6 +68,12 @@
             <li>Souriant</li>
             <li>Communicatif</li>
           </ul>
+          <div class="myself__qualities--img">
+            <img
+              src="assets/images/myself/human_hand_typing_white.svg"
+              alt="human hand typing on a computer"
+            />
+          </div>
         </div>
       </section>
 
@@ -93,7 +104,12 @@
               partage des connaissances sont des valeurs importantes.
             </p>
           </aside>
-          <div class="about__illustration"></div>
+          <div class="about__illustration">
+            <img
+              src="assets/images/about/compilation_about_resize.png"
+              alt=""
+            />
+          </div>
         </div>
       </section>
       <section id="project" class="section section-project">
@@ -211,8 +227,15 @@
       </section>
 
       <section id="contact" class="section section-contact">
-        <h2 class="heading-secondary">Envoyez moi un message !</h2>
+        <h2 class="heading-secondary text-center">Envoyez moi un message !</h2>
         <div class="contact">
+          <div class="contact__side">
+            <p class="contact__side--paragraph">
+              Pour une question, un projet, ou simplement dire bonjour ?
+              Allez-y.
+            </p>
+          </div>
+
           <form action="#" class="form">
             <div class="form__group">
               <input
@@ -246,11 +269,10 @@
               <label for="message" class="form__label"></label>
             </div>
 
-            <div class="form__group u-margin-top-small">
+            <div class="form__group u-margin-top-small u-margin-left-medium">
               <button class="btn">Envoyer</button>
             </div>
           </form>
-          <div class="contact__illustration"></div>
         </div>
       </section>
     </main>
@@ -259,24 +281,26 @@
       <ul class="footer__list">
         <li class="footer__item">
           <a href="mailto:reungoat.matthieu@gmail.com" class="footer__link"
-            >Email</a
-          >
+            ><i class="fa-solid fa-envelope"></i
+          ></a>
         </li>
         <li class="footer__item">
-          <a href="#" class="footer__link">Téléphone</a>
+          <a href="#" class="footer__link"><i class="fa-solid fa-phone"></i></a>
         </li>
         <li class="footer__item">
           <a
             href="https://www.linkedin.com/in/matthieu-reungoat"
             class="footer__link"
-            >linkedIn</a
-          >
+            ><i class="fa-brands fa-linkedin-in"></i
+          ></a>
         </li>
         <li class="footer__item">
-          <a href="https://github.com/Bol2riZH" class="footer__link">Github</a>
+          <a href="https://github.com/Bol2riZH" class="footer__link"
+            ><i class="fa-brands fa-github"></i
+          ></a>
         </li>
       </ul>
-      <p class="footer__copyright">&copy;Matthieu REUNGOAT</p>
+      <p class="footer__copyright">&copy; Matthieu REUNGOAT</p>
     </footer>
     <script defer src="index.js"></script>
   </body>

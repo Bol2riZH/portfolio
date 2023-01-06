@@ -44,4 +44,13 @@ a:link {
 .myself__paragraphe,
 .about__paragraphe {
   font-family: 'Catamaran Thin', sans-serif;
+  font-size: variables.$medium-font-size;
+}
+
+.contact__side {
+  font-family: 'Catamaran Thin', sans-serif;
+  font-size: variables.$medium-font-size;
+  span {
+    font-size: variables.$big-font-size;
+  }
 }

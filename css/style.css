@@ -74,6 +74,15 @@ a:link {
 .myself__paragraphe,
 .about__paragraphe {
   font-family: "Catamaran Thin", sans-serif;
+  font-size: 1.8rem;
+}
+
+.contact__side {
+  font-family: "Catamaran Thin", sans-serif;
+  font-size: 1.8rem;
+}
+.contact__side span {
+  font-size: 3rem;
 }
 
 .center {
@@ -83,6 +92,14 @@ a:link {
 
 .u-margin-top-small {
   margin-top: 2rem !important;
+}
+
+.u-margin-left-medium {
+  margin-left: 4rem !important;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .btn {
@@ -114,7 +131,7 @@ a:link {
 
 .form {
   margin-top: 2rem;
-  width: 60%;
+  width: 50%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -155,6 +172,11 @@ a:link {
   translate: 0 -3rem;
 }
 
+.footer {
+  background-color: #fed766;
+  color: #191717;
+  height: 15rem;
+}
 .footer__list {
   display: flex;
   justify-content: center;
@@ -210,6 +232,14 @@ a:link {
   gap: 2rem;
   margin: 2rem 0;
 }
+.myself__qualities--img {
+  width: 50rem;
+}
+.myself__qualities--img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
 
 .about__container {
   display: flex;
@@ -220,9 +250,12 @@ a:link {
   max-width: 40%;
 }
 .about__illustration {
-  width: 70rem;
   height: 50rem;
-  background-color: #009fb7;
+}
+.about__illustration img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .project__list {
@@ -234,13 +267,12 @@ a:link {
 
 .contact {
   display: flex;
-  justify-content: space-between;
-  gap: 2rem;
+  flex-direction: column;
+  align-items: center;
 }
-.contact__illustration {
-  background-color: #009fb7;
-  width: 70rem;
-  height: 45rem;
+.contact__side {
+  display: flex;
+  flex-direction: column;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -11,9 +11,12 @@
   transition: all 250ms;
   &:hover {
     cursor: pointer;
-    border-radius: 17px;
+    translate: -2px -2px;
+    box-shadow: 2px 2px 0 variables.$color-white;
   }
   &:active {
-    translate: 0 0.2rem;
+    translate: 2px 2px;
+    color: variables.$color-white;
+    box-shadow: none;
   }
 }

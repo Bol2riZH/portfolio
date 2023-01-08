@@ -114,10 +114,13 @@ a:link {
 }
 .btn:hover {
   cursor: pointer;
-  border-radius: 17px;
+  translate: -2px -2px;
+  box-shadow: 2px 2px 0 #fff;
 }
 .btn:active {
-  translate: 0 0.2rem;
+  translate: 2px 2px;
+  color: #fff;
+  box-shadow: none;
 }
 
 .card__img {

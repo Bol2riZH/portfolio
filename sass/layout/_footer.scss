@@ -2,14 +2,6 @@
 
 .footer {
   background-color: variables.$color-secondary;
-  color: variables.$color-grey-dark-4;
-  height: 15rem;
-  &__list {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-  }
-
   &__copyright {
     text-align: right;
   }

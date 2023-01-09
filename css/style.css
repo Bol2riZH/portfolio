@@ -71,7 +71,7 @@ a:link {
   font-weight: 900;
 }
 
-.qualities__paragraphe,
+.quality__paragraphe,
 .about__paragraphe {
   font-family: "Catamaran Thin", sans-serif;
   font-size: 2rem;
@@ -202,9 +202,28 @@ a:link {
 .links__item:active {
   scale: 1.7;
 }
-.links__link:hover {
-  transition: all 300ms;
+
+.fa-envelope,
+.fa-phone,
+.fa-linkedin-in,
+.fa-github {
+  transition: all 450ms;
+}
+
+.fa-envelope:hover {
+  color: #fe4a49;
+}
+
+.fa-phone:hover {
   color: #fed766;
+}
+
+.fa-linkedin-in:hover {
+  color: #009fb7;
+}
+
+.fa-github:hover {
+  color: #fe4a49;
 }
 
 .navigation {
@@ -228,8 +247,7 @@ a:link {
   max-width: 114rem;
   margin: 0 auto 30rem auto;
 }
-
-.section-myself {
+.section__myself {
   height: 60rem;
   display: flex;
   justify-content: space-between;
@@ -237,35 +255,46 @@ a:link {
   padding: 5rem 0;
   background-image: linear-gradient(to right bottom, transparent 0, transparent 65%, #fed766 65%);
 }
-.section-myself .myself__container-left {
+.section__quality, .section__about {
+  padding: 2rem 5rem;
+  border-radius: 2px;
+}
+.section__quality {
+  background-color: #fe4a49;
+}
+.section__about {
+  background-color: #009fb7;
+}
+
+.myself__container-left {
   display: flex;
   flex-direction: column;
 }
-.section-myself .myself__img {
+.myself__img {
   width: 50rem;
   padding: 5rem;
 }
-.section-myself .myself__img img {
+.myself__img img {
   width: 100%;
   object-fit: cover;
 }
 
-.qualities__container {
+.quality__container {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
 }
-.qualities__list {
+.quality__list {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   margin-top: 2rem;
 }
-.qualities__img {
+.quality__img {
   width: 80rem;
   height: 50rem;
 }
-.qualities__img img {
+.quality__img img {
   object-fit: cover;
   width: 100%;
   height: 100%;

@@ -8,6 +8,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -17,8 +18,8 @@ body {
 }
 
 ::selection {
-  background-color: #009fb7;
-  color: #fff;
+  background-color: #fed766;
+  color: #191717;
 }
 
 li {
@@ -77,12 +78,25 @@ a:link {
   font-size: 2rem;
 }
 
+.quality__list {
+  font-size: 2rem;
+}
+
+.quality__skill--list {
+  font-size: 2rem;
+}
+
 .contact__side {
   font-family: "Catamaran Thin", sans-serif;
   font-size: 2rem;
 }
 .contact__side span {
   font-size: 3rem;
+}
+
+.footer__copyright {
+  font-size: 3rem;
+  color: #191717;
 }
 
 .center {
@@ -180,6 +194,7 @@ a:link {
 }
 .footer__copyright {
   text-align: right;
+  padding-right: 2rem;
 }
 
 .links {
@@ -245,15 +260,17 @@ a:link {
 
 .section {
   max-width: 114rem;
-  margin: 0 auto 30rem auto;
+  margin: 30rem auto;
 }
 .section__myself {
+  margin: 0 auto;
   height: 60rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5rem 0;
   background-image: linear-gradient(to right bottom, transparent 0, transparent 65%, #fed766 65%);
+  border-bottom-right-radius: 2px;
 }
 .section__quality, .section__about {
   padding: 2rem 5rem;
@@ -265,6 +282,9 @@ a:link {
 .section__about {
   background-color: #009fb7;
 }
+.section__contact {
+  margin-bottom: 15rem;
+}
 
 .myself__container-left {
   display: flex;
@@ -273,12 +293,19 @@ a:link {
 .myself__img {
   width: 50rem;
   padding: 5rem;
+  border-radius: 2px;
+  outline: 2px solid #fed766;
+  outline-offset: -35px;
 }
 .myself__img img {
   width: 100%;
   object-fit: cover;
 }
 
+.quality__paragraphe {
+  text-align: center;
+  margin-bottom: 2rem;
+}
 .quality__container {
   display: flex;
   justify-content: space-between;
@@ -288,13 +315,35 @@ a:link {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  margin-top: 2rem;
+  margin-top: 5rem;
 }
 .quality__img {
   width: 80rem;
   height: 50rem;
 }
 .quality__img img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.quality__skill--list {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
+}
+.quality__skill--item {
+  display: flex;
+  flex-direction: column;
+}
+.quality__skill--img {
+  display: flex;
+  gap: 2rem;
+  width: 3rem;
+  height: 3rem;
+}
+.quality__skill--img img {
   object-fit: cover;
   width: 100%;
   height: 100%;

@@ -2,8 +2,10 @@
 
 .section {
   max-width: 114rem;
-  margin: 0 auto 30rem auto;
+  margin: 30rem auto;
   &__myself {
+    margin: 0 auto;
+
     height: 60rem;
     display: flex;
     justify-content: space-between;
@@ -16,6 +18,7 @@
       transparent 65%,
       variables.$color-secondary 65%
     );
+    border-bottom-right-radius: 2px;
   }
   &__quality,
   &__about {
@@ -27,7 +30,9 @@
   }
   &__about {
     background-color: variables.$color-tertiary;
-    //padding: 5rem;
+  }
+  &__contact {
+    margin-bottom: 15rem;
   }
 }
 
@@ -39,6 +44,9 @@
   &__img {
     width: 50rem;
     padding: 5rem;
+    border-radius: 2px;
+    outline: 2px solid variables.$color-secondary;
+    outline-offset: -35px;
     img {
       width: 100%;
       object-fit: cover;
@@ -47,6 +55,10 @@
 }
 
 .quality {
+  &__paragraphe {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
   &__container {
     display: flex;
     justify-content: space-between;
@@ -56,7 +68,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 5rem;
   }
   &__img {
     width: 80rem;
@@ -65,6 +77,30 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
+    }
+  }
+  &__skill {
+    &--list {
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      margin-top: 5rem;
+      margin-bottom: 2rem;
+    }
+    &--item {
+      display: flex;
+      flex-direction: column;
+    }
+    &--img {
+      display: flex;
+      gap: 2rem;
+      width: 3rem;
+      height: 3rem;
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }

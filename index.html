@@ -20,6 +20,10 @@
     <title>Matthieu REUNGOAT - portfolio</title>
   </head>
   <body>
+    <header class="header">
+      <span class="header__heading-title">MATTHIEU REUNGOAT</span>
+    </header>
+
     <nav class="navigation">
       <ul class="navigation__list">
         <li class="navigation__item">
@@ -34,36 +38,34 @@
       </ul>
     </nav>
 
-    <aside class="links">
-      <ul class="links__list">
-        <li class="links__item">
-          <a href="mailto:reungoat.matthieu@gmail.com" class="links__link"
-            ><i class="fa-solid fa-envelope"></i
-          ></a>
-        </li>
-        <li class="links__item">
-          <a href="#" class="links__link"><i class="fa-solid fa-phone"></i></a>
-        </li>
-        <li class="links__item">
-          <a
-            href="https://www.linkedin.com/in/matthieu-reungoat"
-            class="links__link"
-            ><i class="fa-brands fa-linkedin-in"></i
-          ></a>
-        </li>
-        <li class="links__item">
-          <a href="https://github.com/Bol2riZH" class="links__link"
-            ><i class="fa-brands fa-github"></i
-          ></a>
-        </li>
-      </ul>
-    </aside>
-
-    <header class="header">
-      <span class="header__heading-title">MATTHIEU REUNGOAT</span>
-    </header>
-
     <main class="main">
+      <aside class="links">
+        <ul class="links__list">
+          <li class="links__item">
+            <a href="mailto:reungoat.matthieu@gmail.com" class="links__link"
+              ><i class="fa-solid fa-envelope"></i
+            ></a>
+          </li>
+          <li class="links__item">
+            <a href="#" class="links__link"
+              ><i class="fa-solid fa-phone"></i
+            ></a>
+          </li>
+          <li class="links__item">
+            <a
+              href="https://www.linkedin.com/in/matthieu-reungoat"
+              class="links__link"
+              ><i class="fa-brands fa-linkedin-in"></i
+            ></a>
+          </li>
+          <li class="links__item">
+            <a href="https://github.com/Bol2riZH" class="links__link"
+              ><i class="fa-brands fa-github"></i
+            ></a>
+          </li>
+        </ul>
+      </aside>
+
       <section class="section section__myself">
         <div class="myself__container-left">
           <h1 class="heading-primary">
@@ -73,7 +75,9 @@
           <p>Adepte du clean & DRY code 🧹</p>
         </div>
         <div class="myself__img">
-          <img src="assets/images/profile/IMG_5696.JPEG" alt="profil" />
+          <!--          <img src="assets/images/myself/IMG_5696.JPEG" alt="profil" />-->
+          <img src="assets/images/myself/MRE_3_resize_3.jpg" alt="profil" />
+          <!--          <img src="assets/images/myself/MRE_1_resize_2.jpg" alt="profil" />-->
         </div>
       </section>
 
@@ -95,11 +99,66 @@
           </ul>
           <div class="quality__img">
             <img
-              src="assets/images/myself/human_hand_typing_white.svg"
+              src="assets/images/quality/human_hand_typing_white.svg"
               alt="human hand typing on a computer"
             />
           </div>
         </div>
+        <ul class="quality__skill--list">
+          <li class="quality__skill--item">
+            <span> JavaScript/TypeScript </span>
+            <div class="quality__skill--img">
+              <img src="assets/images/quality/skill/js.png" alt="javascript" />
+              <img src="assets/images/quality/skill/ts.png" alt="typescript" />
+            </div>
+          </li>
+          <li>
+            <span>Vue/React</span>
+            <div class="quality__skill--img">
+              <img src="assets/images/quality/skill/vue.png" alt="vue" />
+              <img src="assets/images/quality/skill/react.png" alt="react" />
+            </div>
+          </li>
+          <li>
+            <span>Node</span>
+            <div class="quality__skill--img">
+              <img src="assets/images/quality/skill/node.jpg" alt="node" />
+            </div>
+          </li>
+          <li>
+            <span>Express</span>
+            <div class="quality__skill--img">
+              <img
+                src="assets/images/quality/skill/express.png"
+                alt="express"
+              />
+            </div>
+          </li>
+          <li>
+            <span>MongoDB</span>
+            <div class="quality__skill--img">
+              <img
+                src="assets/images/quality/skill/mongodb.png"
+                alt="mongoDB"
+              />
+            </div>
+          </li>
+          <li>
+            <span>Git</span>
+            <div class="quality__skill--img">
+              <img src="assets/images/quality/skill/git.jpg" alt="git" />
+            </div>
+          </li>
+          <li>
+            <span>Photoshop</span>
+            <div class="quality__skill--img">
+              <img
+                src="assets/images/quality/skill/photoshop.png"
+                alt="photoshop"
+              />
+            </div>
+          </li>
+        </ul>
       </section>
 
       <section id="about" class="section section__about">
@@ -303,7 +362,7 @@
     </main>
 
     <footer class="footer">
-      <p class="footer__copyright">&copy; Matthieu REUNGOAT</p>
+      <p class="footer__copyright">&copy;Matthieu REUNGOAT</p>
     </footer>
     <script defer src="index.js"></script>
   </body>

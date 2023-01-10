@@ -10,6 +10,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,8 +20,8 @@ body {
 }
 
 ::selection {
-  background-color: variables.$color-tertiary;
-  color: variables.$color-white;
+  background-color: variables.$color-secondary;
+  color: variables.$color-grey-dark-4;
 }
 
 li {

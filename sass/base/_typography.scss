@@ -46,6 +46,13 @@ a:link {
   font-family: 'Catamaran Thin', sans-serif;
   font-size: variables.$medium-font-size;
 }
+.quality__list {
+  font-size: variables.$medium-font-size;
+}
+
+.quality__skill--list {
+  font-size: variables.$medium-font-size;
+}
 
 .contact__side {
   font-family: 'Catamaran Thin', sans-serif;
@@ -53,4 +60,8 @@ a:link {
   span {
     font-size: variables.$big-font-size;
   }
+}
+.footer__copyright {
+  font-size: variables.$big-font-size;
+  color: variables.$color-grey-dark-4;
 }

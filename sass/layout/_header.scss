@@ -1,1 +1,9 @@
 @use '../abstract/variables';
+
+.header {
+  padding: 0 5rem;
+  &__heading-title {
+    display: flex;
+    flex-direction: column;
+  }
+}

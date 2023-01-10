@@ -44,12 +44,7 @@ a:link {
   color: #fff;
 }
 
-.header {
-  padding: 0 5rem;
-}
 .header__heading-title {
-  display: flex;
-  flex-direction: column;
   text-transform: uppercase;
   font-size: 8rem;
   font-weight: 900;
@@ -78,7 +73,9 @@ a:link {
 }
 
 .quality__paragraphe,
-.about__paragraphes {
+.about__paragraphes,
+.project__paragraphe,
+.card__description {
   font-family: "Catamaran Thin", sans-serif;
   font-size: 2rem;
 }
@@ -91,6 +88,14 @@ a:link {
   font-size: 2rem;
 }
 
+.card__link {
+  font-size: 3rem;
+}
+
+.card__description--techno {
+  font-weight: 600;
+}
+
 .contact__side {
   font-family: "Catamaran Thin", sans-serif;
   font-size: 2rem;
@@ -101,6 +106,7 @@ a:link {
 
 .footer__copyright {
   font-size: 3rem;
+  font-weight: 900;
   color: #191717;
 }
 
@@ -142,13 +148,36 @@ a:link {
   box-shadow: none;
 }
 
+.card {
+  position: relative;
+  transition: all 300ms;
+}
+.card:hover {
+  scale: 1.03;
+}
+.card:hover .card__description {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  position: absolute;
+  top: 5rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 23, 23, 0.9);
+}
 .card__img {
   height: 30rem;
 }
 .card__img img {
+  border-radius: 2px;
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.card__description {
+  display: none;
 }
 
 .form {
@@ -233,6 +262,14 @@ a:link {
   padding-right: 2rem;
 }
 
+.header {
+  padding: 0 5rem;
+}
+.header__heading-title {
+  display: flex;
+  flex-direction: column;
+}
+
 .links {
   position: fixed;
   top: 35rem;
@@ -284,35 +321,36 @@ a:link {
 .myself__img {
   width: 50rem;
   padding: 5rem;
-  border-radius: 2px;
   outline: 2px solid #fed766;
   outline-offset: -30px;
 }
 .myself__img img {
+  border-radius: 2px;
   width: 100%;
   object-fit: cover;
 }
 
 .navigation {
   position: fixed;
-  right: 0;
-  padding-top: 5rem;
-  padding-right: 5rem;
+  right: 5rem;
+  top: 7.5rem;
 }
 .navigation__list {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  gap: 5rem;
 }
 .navigation__item {
   text-align: right;
-  transition: all 200ms;
+  transition: all 250ms;
+  border-bottom: 1px solid transparent;
 }
 .navigation__item:hover {
-  translate: -0.5rem;
+  translate: 0 -0.2rem;
+  border-bottom: 1px solid #fed766;
 }
 
 .project__list {
+  margin-top: 5rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 6rem;

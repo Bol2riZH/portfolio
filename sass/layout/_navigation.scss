@@ -1,19 +1,21 @@
+@use '../abstract/variables';
+
 .navigation {
   position: fixed;
-  right: 0;
-  padding-top: 5rem;
-  padding-right: 5rem;
+  right: 5rem;
+  top: 7.5rem;
   &__list {
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
+    gap: 5rem;
   }
 
   &__item {
     text-align: right;
-    transition: all 200ms;
+    transition: all 250ms;
+    border-bottom: 1px solid transparent;
     &:hover {
-      translate: -0.5rem;
+      translate: 0 -0.2rem;
+      border-bottom: 1px solid variables.$color-secondary;
     }
   }
 }

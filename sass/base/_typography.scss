@@ -14,10 +14,7 @@ a:link {
 }
 
 .header {
-  padding: 0 5rem;
   &__heading-title {
-    display: flex;
-    flex-direction: column;
     text-transform: uppercase;
     font-size: variables.$XXL-font-size;
     font-weight: 900;
@@ -47,7 +44,9 @@ a:link {
 }
 
 .quality__paragraphe,
-.about__paragraphes {
+.about__paragraphes,
+.project__paragraphe,
+.card__description {
   font-family: 'Catamaran Thin', sans-serif;
   font-size: variables.$medium-font-size;
 }
@@ -60,6 +59,14 @@ a:link {
   font-size: variables.$medium-font-size;
 }
 
+.card__link {
+  font-size: variables.$big-font-size;
+}
+
+.card__description--techno {
+  font-weight: 600;
+}
+
 .contact__side {
   font-family: 'Catamaran Thin', sans-serif;
   font-size: variables.$medium-font-size;
@@ -70,5 +77,6 @@ a:link {
 
 .footer__copyright {
   font-size: variables.$big-font-size;
+  font-weight: 900;
   color: variables.$color-grey-dark-4;
 }

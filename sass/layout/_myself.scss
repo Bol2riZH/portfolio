@@ -8,10 +8,10 @@
   &__img {
     width: 50rem;
     padding: 5rem;
-    border-radius: 2px;
     outline: 2px solid variables.$color-secondary;
     outline-offset: -30px;
     img {
+      border-radius: 2px;
       width: 100%;
       object-fit: cover;
     }

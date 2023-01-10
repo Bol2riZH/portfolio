@@ -1,13 +1,33 @@
 @use '../abstract/variables';
 
 .card {
-  //background-color: variables.$color-tertiary;
+  position: relative;
+  transition: all 300ms;
+  &:hover {
+    scale: 1.03;
+    .card__description {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding: 2rem;
+      position: absolute;
+      top: 5rem;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(variables.$color-grey-dark-4, 0.9);
+    }
+  }
   &__img {
     height: 30rem;
     img {
+      border-radius: 2px;
       object-fit: cover;
       width: 100%;
       height: 100%;
     }
   }
+}
+
+.card__description {
+  display: none;
 }

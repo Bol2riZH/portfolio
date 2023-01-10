@@ -1,5 +1,6 @@
 .project {
   &__list {
+    margin-top: 5rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 6rem;

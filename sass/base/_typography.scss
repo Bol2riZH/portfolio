@@ -18,6 +18,7 @@ a:link {
   &__heading-title {
     display: flex;
     flex-direction: column;
+    text-transform: uppercase;
     font-size: variables.$XXL-font-size;
     font-weight: 900;
     color: variables.$color-secondary;
@@ -41,11 +42,16 @@ a:link {
   font-weight: 900;
 }
 
+.navigation__link {
+  font-size: variables.$medium-font-size;
+}
+
 .quality__paragraphe,
-.about__paragraphe {
+.about__paragraphes {
   font-family: 'Catamaran Thin', sans-serif;
   font-size: variables.$medium-font-size;
 }
+
 .quality__list {
   font-size: variables.$medium-font-size;
 }
@@ -61,6 +67,7 @@ a:link {
     font-size: variables.$big-font-size;
   }
 }
+
 .footer__copyright {
   font-size: variables.$big-font-size;
   color: variables.$color-grey-dark-4;

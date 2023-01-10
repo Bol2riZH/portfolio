@@ -1,0 +1,8 @@
+.project {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 6rem;
+    grid-row-gap: 5rem;
+  }
+}

@@ -1,0 +1,23 @@
+.about {
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  &__paragraphes {
+    max-width: 40%;
+  }
+  &__paragraphe {
+    padding: 2rem 0;
+  }
+  &__illustration {
+    height: 50rem;
+    img {
+      padding-bottom: 7rem;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

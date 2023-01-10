@@ -8,9 +8,14 @@
 @use 'components/card';
 @use 'components/form';
 
+@use 'layout/about';
+@use 'layout/contact';
 @use 'layout/footer';
 @use 'layout/header';
 @use 'layout/link';
+@use 'layout/myself';
 @use 'layout/navigation';
+@use 'layout/project';
+@use 'layout/quality';
 
 @use 'page/home';

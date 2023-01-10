@@ -5,13 +5,15 @@
   padding-right: 5rem;
   &__list {
     display: flex;
+    flex-direction: column;
     gap: 2rem;
   }
 
   &__item {
+    text-align: right;
     transition: all 200ms;
     &:hover {
-      translate: 0.5rem;
+      translate: -0.5rem;
     }
   }
 }

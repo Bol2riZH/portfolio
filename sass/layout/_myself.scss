@@ -1,0 +1,19 @@
+@use '../abstract/variables';
+
+.myself {
+  &__container-left {
+    display: flex;
+    flex-direction: column;
+  }
+  &__img {
+    width: 50rem;
+    padding: 5rem;
+    border-radius: 2px;
+    outline: 2px solid variables.$color-secondary;
+    outline-offset: -30px;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

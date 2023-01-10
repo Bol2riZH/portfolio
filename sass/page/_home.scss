@@ -3,6 +3,7 @@
 .section {
   max-width: 114rem;
   margin: 30rem auto;
+  scroll-margin-top: 7rem;
   &__myself {
     margin: 0 auto;
 
@@ -31,7 +32,11 @@
   &__about {
     background-color: variables.$color-tertiary;
   }
+  &__project {
+    scroll-margin-top: 2rem;
+  }
   &__contact {
+    scroll-margin-top: 0;
     margin-bottom: 15rem;
   }
 }

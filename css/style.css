@@ -369,6 +369,7 @@ a:link {
 .section {
   max-width: 114rem;
   margin: 30rem auto;
+  scroll-margin-top: 7rem;
 }
 .section__myself {
   margin: 0 auto;
@@ -390,7 +391,11 @@ a:link {
 .section__about {
   background-color: #009fb7;
 }
+.section__project {
+  scroll-margin-top: 2rem;
+}
 .section__contact {
+  scroll-margin-top: 0;
   margin-bottom: 15rem;
 }
 

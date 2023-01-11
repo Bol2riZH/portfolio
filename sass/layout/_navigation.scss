@@ -8,22 +8,29 @@
     display: flex;
     gap: 5rem;
   }
-
   &__item {
     text-align: right;
     transition: all 250ms;
-    border-bottom: 1px solid transparent;
     &:hover {
       translate: 0 -0.2rem;
+    }
+  }
+  &__link {
+    transition: all 250ms;
+    border-bottom: 1px solid transparent;
+    &:hover {
       border-bottom: 1px solid variables.$color-secondary;
     }
   }
 }
 
-.navigation__column {
+.navigation__position--column {
   flex-direction: column;
-  gap: 2rem;
+  gap: 3.6rem;
 }
-.navigation__position-top {
-  top: 32rem;
+.navigation__position--top {
+  top: 20rem;
+}
+.navigation__animation {
+  animation: appearing 500ms ease-in-out;
 }

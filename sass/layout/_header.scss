@@ -1,4 +1,5 @@
 @use '../abstract/variables';
+@use '../abstract/animation';
 
 .header {
   padding: 0 5rem;
@@ -19,4 +20,8 @@
       text-shadow: -0.4rem 0 0 variables.$color-primary;
     }
   }
+}
+
+.header__animation {
+  animation: scrollDown 350ms ease-in-out;
 }

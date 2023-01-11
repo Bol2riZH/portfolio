@@ -42,6 +42,10 @@ a:link {
 .navigation__link {
   font-size: variables.$medium-font-size;
 }
+.links__mail,
+.links__phoneNumber {
+  font-size: variables.$small-font-size;
+}
 
 .quality__paragraphe,
 .about__paragraphes,

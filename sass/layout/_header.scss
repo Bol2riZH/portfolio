@@ -6,4 +6,17 @@
     display: flex;
     flex-direction: column;
   }
+  &__logo {
+    position: fixed;
+    top: 5rem;
+    font-size: variables.$XXL-font-size;
+    font-weight: 900;
+    transition: all 300ms;
+    &:hover {
+      padding-left: 2rem;
+      scale: 1.5;
+      color: variables.$color-secondary;
+      text-shadow: -0.4rem 0 0 variables.$color-primary;
+    }
+  }
 }

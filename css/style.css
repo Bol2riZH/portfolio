@@ -273,6 +273,19 @@ a:link {
   display: flex;
   flex-direction: column;
 }
+.header__logo {
+  position: fixed;
+  top: 5rem;
+  font-size: 8rem;
+  font-weight: 900;
+  transition: all 300ms;
+}
+.header__logo:hover {
+  padding-left: 2rem;
+  scale: 1.5;
+  color: #fed766;
+  text-shadow: -0.4rem 0 0 #fe4a49;
+}
 
 .links {
   position: fixed;

@@ -19,3 +19,11 @@
     }
   }
 }
+
+.navigation__column {
+  flex-direction: column;
+  gap: 2rem;
+}
+.navigation__position-top {
+  top: 32rem;
+}

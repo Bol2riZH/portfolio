@@ -127,6 +127,10 @@ a:link {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 .btn {
   width: fit-content;
   padding: 1.5rem 3rem;
@@ -347,6 +351,15 @@ a:link {
 .navigation__item:hover {
   translate: 0 -0.2rem;
   border-bottom: 1px solid #fed766;
+}
+
+.navigation__column {
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.navigation__position-top {
+  top: 32rem;
 }
 
 .project__list {

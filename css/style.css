@@ -321,7 +321,7 @@ a:link {
 .links__list {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 .links__item {
   font-size: 3rem;
@@ -399,7 +399,7 @@ a:link {
 
 .navigation__position--column {
   flex-direction: column;
-  gap: 3.6rem;
+  gap: 2rem;
 }
 
 .navigation__position--top {

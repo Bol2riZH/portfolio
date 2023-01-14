@@ -406,7 +406,7 @@ a:link {
   top: 20rem;
 }
 
-.navigation__animation {
+.navigation__animation--appearing {
   animation: appearing 500ms ease-in-out;
 }
 

@@ -389,7 +389,12 @@
             </p>
           </div>
 
-          <form action="#" class="form">
+          <form
+            action="send"
+            method="POST"
+            enctype="multipart/form-data"
+            class="form"
+          >
             <div class="form__group">
               <input
                 type="text"
@@ -397,6 +402,7 @@
                 placeholder="Entrez votre nom"
                 required
                 id="name"
+                name="name"
               />
               <label for="name" class="form__label">Nom</label>
             </div>
@@ -407,6 +413,7 @@
                 placeholder="Entrez votre adresse email"
                 required
                 id="email"
+                name="email"
               />
               <label for="email" class="form__label">Adresse email</label>
             </div>
@@ -418,12 +425,13 @@
                 name="message"
                 placeholder="Entrez votre message"
                 rows="8"
+                required
               ></textarea>
               <label for="message" class="form__label"></label>
             </div>
 
             <div class="form__group u-margin-top-small u-margin-left-medium">
-              <button class="btn">Envoyer</button>
+              <button type="submit" value="submit" class="btn">Envoyer</button>
             </div>
           </form>
         </div>

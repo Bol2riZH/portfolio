@@ -3,14 +3,15 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
 const multiparty = require('multiparty');
+const rateLimitConfig = require('express-rate-limit');
 const cors = require('cors');
 require('dotenv').config();
 
 const PORT = process.env.PORT || 5000;
-
 const app = express();
 
 app.use(cors({ origin: '*' }));
+
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.listen(PORT, () => {
@@ -36,12 +37,18 @@ transporter.verify(function (error, success) {
     : console.error(error);
 });
 
-app.post('/send', (req, res) => {
+const rateLimit = rateLimitConfig({
+  windowMs: 30 * 1000,
+  max: 2,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
+app.post('/send', rateLimit, (req, res) => {
   const form = new multiparty.Form();
   const data = {};
 
   form.parse(req, function (error, fields) {
-    console.log(fields);
     Object.keys(fields).forEach(function (property) {
       data[property] = fields[property].toString();
     });

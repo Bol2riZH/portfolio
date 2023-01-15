@@ -13,9 +13,9 @@ const app = express();
 app.use(cors({ origin: '*' }));
 
 app.use('/public', express.static(process.cwd() + '/public'));
-app.use('/', (req, res) => {
-  res.json({ message: 'server is running' });
-});
+// app.use('/', (req, res) => {
+//   res.json({ message: 'server is running' });
+// });
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });
@@ -56,7 +56,7 @@ app.post('/send', rateLimit, (req, res) => {
     });
 
     const mail = {
-      from: data.email,
+      sender: data.email,
       to: process.env.EMAIL,
       subject: 'contact via portfolio',
       text: `${data.name} <${data.email}> \n${data.message}`,

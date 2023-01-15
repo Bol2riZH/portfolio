@@ -15,6 +15,9 @@
     opacity: 1;
   }
 }
+.appearing {
+  animation: appearing 4s ease-in-out;
+}
 
 @-webkit-keyframes sk-foldCubeAngle {
   0%,

@@ -1,9 +1,11 @@
 'use strict';
+const loaderTimeOut = 1500;
+const popupTimeOut = 1000;
+const spamTimeOut = 1500;
 
 const root = document.getElementsByTagName('html')[0];
 const loader = document.querySelector('.loader');
-const loaderTimeOut = 1500;
-const popupTimeOut = 1000;
+const jobTitle = document.querySelector('.heading-primary');
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
@@ -12,6 +14,8 @@ window.addEventListener('load', () => {
     loader.classList.add('loader--hidden');
     root.classList.remove('no-scroll');
   }, loaderTimeOut);
+  jobTitle.classList.add('appearing');
+  jobTitle.classList.add('scaleDown');
 });
 
 const logo = document.querySelector('.header__logo');
@@ -35,8 +39,6 @@ document.addEventListener('scroll', () => {
   }
 });
 
-const popup = document.querySelector('.popup');
-
 const sendMail = async (mail) => {
   loader.classList.remove('loader--hidden');
   loader.style.backgroundColor = 'rgba(25, 23, 23, 0.8)';
@@ -46,13 +48,44 @@ const sendMail = async (mail) => {
       method: 'POST',
       body: mail,
     });
-    if (response.ok) {
-      popup.classList.add('popup--open');
+    console.log(response);
+
+    if (response) {
       loader.classList.add('loader--hidden');
       root.classList.remove('no-scroll');
+    }
 
+    if (response.ok) {
+      const popup = `
+          <div class="popup">
+            <p class="popup__paragraph">Message reçu !</p>
+          </div>`;
+
+      loader.insertAdjacentHTML('afterend', popup);
       setTimeout(() => {
-        popup.classList.remove('popup--open');
+        document.querySelector('.popup').remove();
+      }, popupTimeOut);
+      form.reset();
+    }
+    if (response.statusText === 'Too Many Requests') {
+      const spam = `
+          <div class="popup">
+            <p class="popup__paragraph">Alerte au spam ! </br> Merci de patientez 30 sec...</p>
+          </div>`;
+
+      loader.insertAdjacentHTML('afterend', spam);
+      setTimeout(() => {
+        document.querySelector('.popup').remove();
+      }, spamTimeOut);
+    } else {
+      const error = `
+          <div class="popup">
+            <p class="popup__paragraph">Erreur...</p>
+          </div>`;
+
+      loader.insertAdjacentHTML('afterend', error);
+      setTimeout(() => {
+        document.querySelector('.popup').remove();
       }, popupTimeOut);
     }
   } catch (e) {

@@ -56,7 +56,7 @@ app.post('/send', rateLimit, (req, res) => {
     });
 
     const mail = {
-      sender: data.email,
+      from: data.email,
       to: process.env.EMAIL,
       subject: 'contact via portfolio',
       text: `${data.name} <${data.email}> \n${data.message}`,

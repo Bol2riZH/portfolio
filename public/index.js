@@ -2,6 +2,7 @@
 const loaderTimeOut = 1500;
 const popupTimeOut = 1000;
 const spamTimeOut = 1500;
+const urlBase = 'https://www.matthieu-reungoat.com';
 
 const root = document.getElementsByTagName('html')[0];
 const loader = document.querySelector('.loader');
@@ -44,7 +45,7 @@ const sendMail = async (mail) => {
   loader.style.backgroundColor = 'rgba(25, 23, 23, 0.8)';
   root.classList.add('no-scroll');
   try {
-    const response = await fetch('http://localhost:3000/send', {
+    const response = await fetch(`${urlBase}/send`, {
       method: 'POST',
       body: mail,
     });

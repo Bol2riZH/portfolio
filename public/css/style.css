@@ -52,6 +52,21 @@
     opacity: 0;
   }
 }
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+[1200 - 1800]   Where our normal styles apply
+1800px + :      Big Desktop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-port
+- big-desktop
+
+ORDER: Base + Typography > general layout + grid + page layout > components
+*/
 *,
 *::before,
 *::after {
@@ -63,6 +78,21 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth;
+}
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
 }
 
 body {
@@ -142,6 +172,12 @@ a:link {
 .card__description {
   font-family: "Catamaran Thin", sans-serif;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 75em) {
+  .card__description {
+    font-size: 3rem;
+  }
 }
 
 .quality__list {
@@ -558,6 +594,11 @@ a:link {
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 6rem;
   grid-row-gap: 5rem;
+}
+@media only screen and (max-width: 75em) {
+  .project__list {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .quality__paragraphe {

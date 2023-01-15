@@ -7,7 +7,8 @@
     "watch:sass": "sass --watch public/sass/main.scss public/css/style.css",
     "live": "live-server",
     "start": "npm-run-all --parallel live watch:sass",
-    "server": "nodemon server.js"
+    "nodemon": "nodemon server.js",
+    "server": "node server.js"
   },
   "repository": {
     "type": "git",

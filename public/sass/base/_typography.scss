@@ -21,6 +21,10 @@ a:link {
     font-weight: 900;
     color: variables.$color-secondary;
     text-shadow: -0.4rem 0 0 variables.$color-primary;
+
+    @include mixins.respond(mid-desktop) {
+      font-size: variables.$large-font-size;
+    }
   }
 }
 
@@ -47,10 +51,6 @@ a:link {
 
 .navigation__link {
   font-size: variables.$medium-font-size;
-}
-.links__mail,
-.links__phoneNumber {
-  font-size: variables.$small-font-size;
 }
 
 .quality__paragraphe,

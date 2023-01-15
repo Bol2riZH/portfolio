@@ -1,9 +1,14 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .links {
   position: fixed;
   top: 20rem;
   left: 5rem;
+
+  @include mixins.respond(mid-desktop) {
+    left: 2rem;
+  }
   &__list {
     display: flex;
     flex-direction: column;

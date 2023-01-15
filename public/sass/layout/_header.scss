@@ -1,8 +1,14 @@
 @use '../abstract/variables';
 @use '../abstract/animation';
+@use '../abstract/mixins';
 
 .header {
   padding: 0 5rem;
+
+  @include mixins.respond(mid-desktop) {
+    padding-left: 2rem;
+  }
+
   &__heading-title {
     display: flex;
     flex-direction: column;
@@ -13,6 +19,11 @@
     font-size: variables.$XXL-font-size;
     font-weight: 900;
     transition: all 300ms;
+    z-index: 2;
+
+    @include mixins.respond(mid-desktop) {
+      font-size: variables.$large-font-size;
+    }
     &:hover {
       padding-left: 2rem;
       scale: 1.5;

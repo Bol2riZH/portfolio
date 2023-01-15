@@ -4,11 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta
+      name="description"
+      content="Matthieu Reungoat : Développeur Web. Vous trouverez ici les projets que j'ai réalisés. Front-end / Back-end / Full-Stack sur différentes technos : HTML CSS JavaScript - REACT & Vue"
+    />
 
     <script
       src="https://kit.fontawesome.com/056befc51e.js"
       crossorigin="anonymous"
     ></script>
+
     <link rel="stylesheet" href="css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +22,7 @@
       rel="stylesheet"
     />
     <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+
     <title>Matthieu REUNGOAT - portfolio</title>
   </head>
   <body>
@@ -53,17 +59,48 @@
       </ul>
     </nav>
 
+    <div id="mySidenav" class="sidenav">
+      <a id="closeBtn" href="#" class="close">×</a>
+      <ul>
+        <li class="navigation__item">
+          <a href="#skill" class="navigation__link">Compétences</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#about" class="navigation__link">À propos</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#project" class="navigation__link">Projets</a>
+        </li>
+        <li class="navigation__item">
+          <a href="#contact" class="navigation__link">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <a href="#" id="openBtn">
+      <span class="burger-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </a>
+
     <main class="main">
       <aside class="links">
         <ul class="links__list">
           <li class="links__item">
-            <a href="#contact" class="links__link"
+            <a
+              href="#contact"
+              class="links__link"
+              aria-description="email address"
               ><i class="fa-solid fa-envelope"></i>
-              <p class="links__mail hidden">reungoat.matthieu@gmail.com</p>
             </a>
           </li>
           <li class="links__item">
-            <a href="https://github.com/Bol2riZH" class="links__link"
+            <a
+              href="https://github.com/Bol2riZH"
+              class="links__link"
+              aria-description="Github link"
               ><i class="fa-brands fa-github"></i
             ></a>
           </li>
@@ -71,6 +108,7 @@
             <a
               href="https://www.linkedin.com/in/matthieu-reungoat"
               class="links__link"
+              aria-description="linkedIn link"
               ><i class="fa-brands fa-linkedin-in"></i
             ></a>
           </li>

@@ -9,16 +9,17 @@
 @use 'components/button';
 @use 'components/card';
 @use 'components/form';
+@use 'components/link';
 @use 'components/loader';
+@use 'components/navigation';
 @use 'components/popup';
+@use 'components/sidebar';
 
 @use 'layout/about';
 @use 'layout/contact';
 @use 'layout/footer';
 @use 'layout/header';
-@use 'layout/link';
 @use 'layout/myself';
-@use 'layout/navigation';
 @use 'layout/project';
 @use 'layout/quality';
 

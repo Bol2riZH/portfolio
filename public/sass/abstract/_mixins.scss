@@ -24,7 +24,7 @@
 $breakpoint argument choices:
 - phone
 - tab-port
-- tab-port
+- tab-land
 - big-desktop
 
 ORDER: Base + Typography > general layout + grid + page layout > components
@@ -32,14 +32,26 @@ ORDER: Base + Typography > general layout + grid + page layout > components
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone {
+    @media only screen and (max-width: 37.5em) {
+      // 600px
+      @content;
+    }
+  }
+  @if $breakpoint == tab-port {
     @media only screen and (max-width: 56.25em) {
       // 900px
       @content;
     }
   }
-  @if $breakpoint == tab-port {
-    @media only screen and (max-width: 75em) {
-      // 1200px
+  @if $breakpoint == tab-land {
+    @media only screen and (max-width: 81.25em) {
+      // 1300px
+      @content;
+    }
+  }
+  @if $breakpoint == mid-desktop {
+    // 1600px
+    @media only screen and (max-width: 100em) {
       @content;
     }
   }

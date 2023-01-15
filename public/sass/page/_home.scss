@@ -1,12 +1,17 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .section {
   max-width: 114rem;
   margin: 30rem auto;
-  scroll-margin-top: 7rem;
+  scroll-margin-top: 2rem;
+
+  @include mixins.respond(mid-desktop) {
+    max-width: 95rem;
+  }
+
   &__myself {
     margin: 0 auto;
-
     height: 60rem;
     display: flex;
     justify-content: space-between;
@@ -21,20 +26,25 @@
     );
     border-bottom-right-radius: 2px;
   }
+
   &__quality,
   &__about {
-    padding: 2rem 5rem;
+    padding: 1rem 5rem;
     border-radius: 2px;
   }
+
   &__quality {
     background-color: variables.$color-primary;
   }
+
   &__about {
     background-color: variables.$color-tertiary;
   }
+
   &__project {
     scroll-margin-top: 2rem;
   }
+
   &__contact {
     scroll-margin-top: 0;
     margin-bottom: 15rem;

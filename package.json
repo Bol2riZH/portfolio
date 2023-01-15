@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "sass --watch public/sass/main.scss public/css/style.css",
     "live": "live-server",
-    "run-all": "npm-run-all --parallel live watch:sass",
+    "live-sass": "npm-run-all --parallel live watch:sass",
     "nodemon": "nodemon server.js",
     "start": "node server.js"
   },

@@ -1,0 +1,57 @@
+@use '../abstract/variables';
+@use '../abstract/mixins';
+
+/* Sidenav menu */
+.sidenav {
+  height: 100%;
+  width: 25rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: -25rem;
+  background-color: variables.$color-secondary;
+  padding-top: 6rem;
+  transition: left 250ms ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+  padding: 0.8rem 0.8rem 0.8rem 3.2rem;
+  text-decoration: none;
+  font-size: variables.$medium-font-size;
+  color: variables.$color-grey-dark-4;
+  display: block;
+  transition: 300ms;
+}
+
+.sidenav a:hover {
+  color: variables.$color-white;
+}
+
+.sidenav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+  left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+  font-size: variables.$large-font-size;
+}
+
+/* Icône burger */
+.burger-icon span {
+  display: block;
+  width: 3.5rem;
+  height: 0.5rem;
+  background-color: variables.$color-white;
+  margin: 0.6rem 0;
+}

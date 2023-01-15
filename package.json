@@ -6,9 +6,9 @@
   "scripts": {
     "watch:sass": "sass --watch public/sass/main.scss public/css/style.css",
     "live": "live-server",
-    "start": "npm-run-all --parallel live watch:sass",
+    "run-all": "npm-run-all --parallel live watch:sass",
     "nodemon": "nodemon server.js",
-    "server": "node server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",

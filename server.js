@@ -13,7 +13,9 @@ const app = express();
 app.use(cors({ origin: '*' }));
 
 app.use('/public', express.static(process.cwd() + '/public'));
-
+app.use('/', (req, res) => {
+  res.json({ message: 'server is running' });
+});
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}...`);
 });

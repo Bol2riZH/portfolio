@@ -4,49 +4,54 @@ const popupTimeOut = 1000;
 const spamTimeOut = 1500;
 const urlBase = 'https://portfolio-server-phi-three.vercel.app';
 
-const sidenav = document.querySelector('#mySidenav');
+const sidenavId = document.querySelector('#mySidenav');
+const burgerIcon = document.querySelector('.burger-icon');
 const openBtn = document.querySelector('#openBtn');
 const closeBtn = document.querySelector('#closeBtn');
-
-const openNav = () => {
-  sidenav.classList.add('active');
-};
-openBtn.onclick = openNav;
-
-const closeNav = () => {
-  sidenav.classList.remove('active');
-};
-closeBtn.onclick = closeNav;
 
 const root = document.getElementsByTagName('html')[0];
 const loader = document.querySelector('.loader');
 const jobTitle = document.querySelector('.heading-primary');
 
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-  root.classList.add('no-scroll');
-  setTimeout(() => {
-    loader.classList.add('loader--hidden');
-    root.classList.remove('no-scroll');
-  }, loaderTimeOut);
-  jobTitle.classList.add('appearing');
-  jobTitle.classList.add('scaleDown');
-});
-
 const logo = document.querySelector('.header__logo');
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
 
+const openNav = () => {
+  navbar.classList.add('active');
+  closeBtn.classList.remove('hidden');
+  navbarList.classList.add('navigation__position--column');
+  navbar.classList.remove('navigation__position--top');
+};
+openBtn.onclick = openNav;
+
+const closeNav = () => {
+  navbar.classList.remove('active');
+  closeBtn.classList.add('hidden');
+};
+closeBtn.onclick = closeNav;
+
+// window.addEventListener('load', () => {
+//   window.scrollTo(0, 0);
+//   root.classList.add('no-scroll');
+//   setTimeout(() => {
+//     loader.classList.add('loader--hidden');
+//     root.classList.remove('no-scroll');
+//   }, loaderTimeOut);
+//   jobTitle.classList.add('appearing');
+//   jobTitle.classList.add('scaleDown');
+// });
+
 document.addEventListener('scroll', () => {
   const positionY = window.scrollY;
-  if (positionY > 137) {
+  if (positionY > 137 && window.screen.width > 1300) {
     navbar.classList.add('navigation__position--top');
     navbar.classList.add('navigation__animation--appearing');
     navbarList.classList.add('navigation__position--column');
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
   }
-  if (positionY < 137) {
+  if (positionY < 137 && window.screen.width > 1300) {
     navbar.classList.remove('navigation__position--top');
     navbar.classList.remove('navigation__animation--appearing');
     navbarList.classList.remove('navigation__position--column');

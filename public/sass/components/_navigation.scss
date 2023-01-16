@@ -6,10 +6,20 @@
   right: 5rem;
   top: 7.5rem;
 
+  z-index: 4;
+
   @include mixins.respond(mid-desktop) {
     right: 2rem;
     top: 4.8rem;
   }
+  @include mixins.respond(tab-land) {
+    right: -60rem;
+    transition: right 250ms ease;
+    background-color: variables.$color-secondary;
+    padding: 8rem 4rem;
+    border-radius: 2px;
+  }
+
   &__list {
     display: flex;
     gap: 5rem;
@@ -43,4 +53,38 @@
 }
 .navigation__animation--appearing {
   animation: appearing 500ms ease-in-out;
+}
+
+.navigation.active {
+  right: 0;
+}
+
+.navigation .close {
+  position: absolute;
+  top: -2rem;
+  right: 1rem;
+  font-size: variables.$large-font-size;
+  color: variables.$color-grey-dark-4;
+}
+
+.burger-icon span {
+  display: none;
+  width: 4.5rem;
+  height: 0.8rem;
+  background-color: variables.$color-white;
+  border: 2px solid variables.$color-grey-dark-4;
+  border-radius: 2px;
+  margin: 0.6rem 0;
+
+  @include mixins.respond(tab-land) {
+    display: block;
+  }
+}
+
+.burger-link {
+  @include mixins.respond(tab-land) {
+    position: fixed;
+    top: 5rem;
+    right: 2rem;
+  }
 }

@@ -8,6 +8,9 @@
   @include mixins.respond(mid-desktop) {
     padding-left: 2rem;
   }
+  @include mixins.respond(tab-land) {
+    padding-top: 2rem;
+  }
 
   &__heading-title {
     display: flex;

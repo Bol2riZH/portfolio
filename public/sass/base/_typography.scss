@@ -53,6 +53,12 @@ a:link {
   font-size: variables.$medium-font-size;
 }
 
+.navigation__item a {
+  @include mixins.respond(tab-land) {
+    color: variables.$color-grey-dark-4;
+  }
+}
+
 .quality__paragraphe,
 .about__paragraphes,
 .project__paragraphe,

@@ -27,22 +27,22 @@
   </head>
   <body>
     <script defer src="index.js"></script>
-
     <header id="header" class="header">
       <span class="header__heading-title">Matthieu Reungoat</span>
       <a href="#header" class="header__logo hidden">MR.</a>
     </header>
 
-    <div class="loader">
-      <div class="sk-folding-cube loader-background">
-        <div class="sk-cube1 sk-cube"></div>
-        <div class="sk-cube2 sk-cube"></div>
-        <div class="sk-cube4 sk-cube"></div>
-        <div class="sk-cube3 sk-cube"></div>
-      </div>
-    </div>
+    <!--    <div class="loader">-->
+    <!--      <div class="sk-folding-cube loader-background">-->
+    <!--        <div class="sk-cube1 sk-cube"></div>-->
+    <!--        <div class="sk-cube2 sk-cube"></div>-->
+    <!--        <div class="sk-cube4 sk-cube"></div>-->
+    <!--        <div class="sk-cube3 sk-cube"></div>-->
+    <!--      </div>-->
+    <!--    </div>-->
 
     <nav class="navigation">
+      <a id="closeBtn" class="close hidden">×</a>
       <ul class="navigation__list">
         <li class="navigation__item">
           <a href="#skill" class="navigation__link">Compétences</a>
@@ -59,25 +59,7 @@
       </ul>
     </nav>
 
-    <div id="mySidenav" class="sidenav">
-      <a id="closeBtn" href="#" class="close">×</a>
-      <ul>
-        <li class="navigation__item">
-          <a href="#skill" class="navigation__link">Compétences</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#about" class="navigation__link">À propos</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#project" class="navigation__link">Projets</a>
-        </li>
-        <li class="navigation__item">
-          <a href="#contact" class="navigation__link">Contact</a>
-        </li>
-      </ul>
-    </div>
-
-    <a href="#" id="openBtn">
+    <a id="openBtn" class="burger-link">
       <span class="burger-icon">
         <span></span>
         <span></span>

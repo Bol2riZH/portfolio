@@ -744,6 +744,11 @@ a:link {
   outline: 2px solid #fed766;
   outline-offset: -30px;
 }
+@media only screen and (max-width: 37.5em) {
+  .myself__img {
+    width: 100%;
+  }
+}
 .myself__img img {
   border-radius: 2px;
   width: 100%;

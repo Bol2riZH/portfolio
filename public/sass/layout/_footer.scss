@@ -1,9 +1,15 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .footer {
   background-color: variables.$color-secondary;
   &__copyright {
     text-align: right;
     padding-right: 2rem;
+
+    @include mixins.respond(phone) {
+      padding: 5rem;
+      text-align: center;
+    }
   }
 }

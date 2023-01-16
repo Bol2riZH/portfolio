@@ -4,8 +4,6 @@ const popupTimeOut = 1000;
 const spamTimeOut = 1500;
 const urlBase = 'https://portfolio-server-phi-three.vercel.app';
 
-const sidenavId = document.querySelector('#mySidenav');
-const burgerIcon = document.querySelector('.burger-icon');
 const openBtn = document.querySelector('#openBtn');
 const closeBtn = document.querySelector('#closeBtn');
 
@@ -14,8 +12,12 @@ const loader = document.querySelector('.loader');
 const jobTitle = document.querySelector('.heading-primary');
 
 const logo = document.querySelector('.header__logo');
+
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
+const navbarLink = document.querySelector('.navigation__link');
+
+const links = document.querySelector('.links');
 
 const openNav = () => {
   navbar.classList.add('active');
@@ -30,6 +32,7 @@ const closeNav = () => {
   closeBtn.classList.add('hidden');
 };
 closeBtn.onclick = closeNav;
+navbarList.onclick = closeNav;
 
 window.addEventListener('load', () => {
   window.scrollTo(0, 0);
@@ -42,22 +45,34 @@ window.addEventListener('load', () => {
   jobTitle.classList.add('scaleDown');
 });
 
+document.addEventListener('resize', () => {
+  if (window.screen.width < 1300) {
+    navbarList.classList.add('navigation__position--column');
+  }
+});
+
 document.addEventListener('scroll', () => {
   const positionY = window.scrollY;
   if (positionY > 137) {
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
+    navbarLink.classList.remove('hidden');
     if (window.screen.width > 1300) {
       navbar.classList.add('navigation__position--top');
       navbar.classList.add('navigation__animation--appearing');
       navbarList.classList.add('navigation__position--column');
     }
   }
+  if (positionY > 137 && window.screen.width < 900) {
+    links.classList.add('hidden');
+  }
   if (positionY < 137) {
     navbar.classList.remove('navigation__position--top');
     navbar.classList.remove('navigation__animation--appearing');
     navbarList.classList.remove('navigation__position--column');
+    navbarLink.classList.add('hidden');
     logo.classList.add('hidden');
+    links.classList.remove('hidden');
     if (window.screen.width < 1300) {
       navbarList.classList.add('navigation__position--column');
     }

@@ -174,6 +174,12 @@ a:link {
 .navigation__link {
   font-size: 2rem;
 }
+@media only screen and (max-width: 81.25em) {
+  .navigation__link {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}
 
 @media only screen and (max-width: 81.25em) {
   .navigation__item a {
@@ -500,9 +506,12 @@ a:link {
 }
 @media only screen and (max-width: 81.25em) {
   .navigation {
-    right: -60rem;
+    top: 0;
+    right: -150rem;
+    height: 100%;
+    width: 100%;
     transition: right 250ms ease;
-    background-color: #009fb7;
+    background-color: rgba(254, 215, 102, 0.9);
     padding: 8rem 4rem;
     border-radius: 2px;
   }
@@ -516,12 +525,26 @@ a:link {
     gap: 2.5rem;
   }
 }
+@media only screen and (max-width: 81.25em) {
+  .navigation__list {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    align-items: center;
+  }
+}
 .navigation__item {
   text-align: right;
   transition: all 250ms;
 }
 .navigation__item:hover {
   translate: 0 -0.2rem;
+}
+@media only screen and (max-width: 56.25em) {
+  .navigation__item {
+    text-align: left;
+  }
 }
 .navigation__link {
   transition: all 250ms;
@@ -542,7 +565,7 @@ a:link {
 }
 
 .navigation__position--top {
-  top: 20rem;
+  top: 15rem;
 }
 
 .navigation__animation--appearing {
@@ -557,9 +580,9 @@ a:link {
   position: absolute;
   top: -2rem;
   right: 1rem;
-  font-size: 6rem;
+  font-size: 8rem;
   color: #191717;
-  transition: scale 200ms ease;
+  transition: scale 250ms ease-in-out;
 }
 .navigation .close:hover {
   scale: 1.1;
@@ -642,6 +665,12 @@ a:link {
   text-align: right;
   padding-right: 2rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .footer__copyright {
+    padding: 5rem;
+    text-align: center;
+  }
+}
 
 .header {
   padding: 0 5rem;
@@ -656,14 +685,14 @@ a:link {
     padding-top: 2rem;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .header {
+    display: none;
+  }
+}
 .header__heading-title {
   display: flex;
   flex-direction: column;
-}
-@media only screen and (max-width: 81.25em) {
-  .header__heading-title {
-    align-items: center;
-  }
 }
 .header__logo {
   position: fixed;
@@ -768,6 +797,13 @@ a:link {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (max-width: 81.25em) {
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .section {

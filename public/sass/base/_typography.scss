@@ -51,6 +51,11 @@ a:link {
 
 .navigation__link {
   font-size: variables.$medium-font-size;
+
+  @include mixins.respond(tab-land) {
+    font-size: variables.$big-font-size;
+    font-weight: 900;
+  }
 }
 
 .navigation__item a {

@@ -1,6 +1,13 @@
 @use '../abstract/variables';
 @use '../abstract/mixins';
 
+.main {
+  @include mixins.respond(tab-land) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .section {
   max-width: 114rem;
   margin: 30rem auto;

@@ -11,14 +11,13 @@
   @include mixins.respond(tab-land) {
     padding-top: 2rem;
   }
+  @include mixins.respond(tab-port) {
+    display: none;
+  }
 
   &__heading-title {
     display: flex;
     flex-direction: column;
-
-    @include mixins.respond(tab-land) {
-      align-items: center;
-    }
   }
   &__logo {
     position: fixed;

@@ -15,7 +15,7 @@
   @include mixins.respond(tab-land) {
     right: -60rem;
     transition: right 250ms ease;
-    background-color: variables.$color-secondary;
+    background-color: variables.$color-tertiary;
     padding: 8rem 4rem;
     border-radius: 2px;
   }
@@ -41,6 +41,12 @@
     &:hover {
       border-bottom: 1px solid variables.$color-secondary;
     }
+
+    @include mixins.respond(tab-land) {
+      &:hover {
+        border-bottom: 1px solid variables.$color-grey-dark-4;
+      }
+    }
   }
 }
 
@@ -65,16 +71,19 @@
   right: 1rem;
   font-size: variables.$large-font-size;
   color: variables.$color-grey-dark-4;
+  transition: scale 200ms ease;
+
+  &:hover {
+    scale: 1.1;
+  }
 }
 
 .burger-icon span {
   display: none;
   width: 4.5rem;
-  height: 0.8rem;
+  height: 0.4rem;
   background-color: variables.$color-white;
-  border: 2px solid variables.$color-grey-dark-4;
-  border-radius: 2px;
-  margin: 0.6rem 0;
+  margin: 1rem 0;
 
   @include mixins.respond(tab-land) {
     display: block;
@@ -86,5 +95,10 @@
     position: fixed;
     top: 5rem;
     right: 2rem;
+    transition: scale 200ms ease;
+
+    &:hover {
+      scale: 1.1;
+    }
   }
 }

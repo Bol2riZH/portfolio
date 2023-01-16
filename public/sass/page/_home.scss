@@ -10,6 +10,10 @@
     max-width: 95rem;
   }
 
+  @include mixins.respond(tab-land) {
+    margin: 20rem 10rem;
+  }
+
   &__myself {
     margin: 0 auto;
     height: 60rem;
@@ -25,6 +29,19 @@
       variables.$color-secondary 65%
     );
     border-bottom-right-radius: 2px;
+
+    @include mixins.respond(tab-land) {
+      flex-direction: column;
+      height: 100%;
+      width: 80%;
+
+      background-image: linear-gradient(
+        to right bottom,
+        transparent 0,
+        transparent 70%,
+        variables.$color-secondary 70%
+      );
+    }
   }
 
   &__quality,

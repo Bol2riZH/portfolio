@@ -9,6 +9,10 @@
   @include mixins.respond(mid-desktop) {
     left: 2rem;
   }
+  @include mixins.respond(tab-land) {
+    top: 35%;
+  }
+
   &__list {
     display: flex;
     flex-direction: column;

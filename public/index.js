@@ -1,5 +1,5 @@
 'use strict';
-const loaderTimeOut = 1500;
+const loaderTimeOut = 900;
 const popupTimeOut = 1000;
 const spamTimeOut = 1500;
 const urlBase = 'https://portfolio-server-phi-three.vercel.app';
@@ -31,31 +31,36 @@ const closeNav = () => {
 };
 closeBtn.onclick = closeNav;
 
-// window.addEventListener('load', () => {
-//   window.scrollTo(0, 0);
-//   root.classList.add('no-scroll');
-//   setTimeout(() => {
-//     loader.classList.add('loader--hidden');
-//     root.classList.remove('no-scroll');
-//   }, loaderTimeOut);
-//   jobTitle.classList.add('appearing');
-//   jobTitle.classList.add('scaleDown');
-// });
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+  root.classList.add('no-scroll');
+  setTimeout(() => {
+    loader.classList.add('loader--hidden');
+    root.classList.remove('no-scroll');
+  }, loaderTimeOut);
+  jobTitle.classList.add('appearing');
+  jobTitle.classList.add('scaleDown');
+});
 
 document.addEventListener('scroll', () => {
   const positionY = window.scrollY;
-  if (positionY > 137 && window.screen.width > 1300) {
-    navbar.classList.add('navigation__position--top');
-    navbar.classList.add('navigation__animation--appearing');
-    navbarList.classList.add('navigation__position--column');
+  if (positionY > 137) {
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
+    if (window.screen.width > 1300) {
+      navbar.classList.add('navigation__position--top');
+      navbar.classList.add('navigation__animation--appearing');
+      navbarList.classList.add('navigation__position--column');
+    }
   }
-  if (positionY < 137 && window.screen.width > 1300) {
+  if (positionY < 137) {
     navbar.classList.remove('navigation__position--top');
     navbar.classList.remove('navigation__animation--appearing');
     navbarList.classList.remove('navigation__position--column');
     logo.classList.add('hidden');
+    if (window.screen.width < 1300) {
+      navbarList.classList.add('navigation__position--column');
+    }
   }
 });
 

@@ -1,9 +1,13 @@
 @use '../abstract/variables';
+@use '../abstract/mixins';
 
 .myself {
   &__container-left {
     display: flex;
     flex-direction: column;
+
+    @include mixins.respond(tab-land) {
+    }
   }
   &__img {
     width: 50rem;

@@ -15,6 +15,10 @@
   &__heading-title {
     display: flex;
     flex-direction: column;
+
+    @include mixins.respond(tab-land) {
+      align-items: center;
+    }
   }
   &__logo {
     position: fixed;
@@ -27,6 +31,10 @@
     @include mixins.respond(mid-desktop) {
       font-size: variables.$large-font-size;
     }
+    @include mixins.respond(tab-land) {
+      font-size: variables.$big-font-size;
+    }
+
     &:hover {
       padding-left: 2rem;
       scale: 1.5;

@@ -16,6 +16,7 @@ const logo = document.querySelector('.header__logo');
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
 const navbarLink = document.querySelector('.navigation__link');
+const navBurger = document.querySelector('.burger-link');
 
 const links = document.querySelector('.links');
 
@@ -42,10 +43,9 @@ window.addEventListener('load', () => {
     root.classList.remove('no-scroll');
   }, loaderTimeOut);
   jobTitle.classList.add('appearing');
-  jobTitle.classList.add('scaleDown');
 });
 
-document.addEventListener('resize', () => {
+window.addEventListener('resize', () => {
   if (window.screen.width < 1300) {
     navbarList.classList.add('navigation__position--column');
   }
@@ -57,15 +57,17 @@ document.addEventListener('scroll', () => {
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
     navbarLink.classList.remove('hidden');
+
     if (window.screen.width > 1300) {
       navbar.classList.add('navigation__position--top');
       navbar.classList.add('navigation__animation--appearing');
       navbarList.classList.add('navigation__position--column');
     }
+    if (window.screen.width < 900) {
+      links.classList.add('hidden');
+    }
   }
-  if (positionY > 137 && window.screen.width < 900) {
-    links.classList.add('hidden');
-  }
+
   if (positionY < 137) {
     navbar.classList.remove('navigation__position--top');
     navbar.classList.remove('navigation__animation--appearing');

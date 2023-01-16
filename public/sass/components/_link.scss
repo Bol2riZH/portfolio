@@ -10,7 +10,7 @@
     left: 2rem;
   }
   @include mixins.respond(tab-land) {
-    top: 35%;
+    top: 35rem;
   }
 
   &__list {

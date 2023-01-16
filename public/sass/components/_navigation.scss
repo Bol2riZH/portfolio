@@ -92,7 +92,7 @@
   display: none;
   width: 4.5rem;
   height: 0.4rem;
-  background-color: variables.$color-white;
+  background-color: variables.$color-black;
   margin: 1rem 0;
 
   @include mixins.respond(tab-land) {
@@ -107,8 +107,14 @@
     right: 2rem;
     transition: scale 200ms ease;
 
+    border-radius: 2px;
+    background: variables.$color-secondary;
+    box-shadow: 0 0 2rem variables.$color-grey-dark-3;
+    padding: 0.5rem 1rem;
+
     &:hover {
       scale: 1.1;
+      box-shadow: 0 0 3rem variables.$color-grey-dark-3;
     }
   }
 }

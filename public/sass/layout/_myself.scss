@@ -5,8 +5,8 @@
   &__container-left {
     display: flex;
     flex-direction: column;
-
-    @include mixins.respond(tab-land) {
+    @include mixins.respond(phone) {
+      margin-top: 10rem;
     }
   }
   &__img {

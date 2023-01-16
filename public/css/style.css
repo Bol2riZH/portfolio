@@ -101,6 +101,7 @@ html {
 }
 
 body {
+  overflow-x: hidden;
   margin: 0 auto;
   box-sizing: border-box;
   background-color: #191717;
@@ -253,7 +254,7 @@ a:link {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .specific-font-size {
@@ -368,7 +369,7 @@ a:link {
 }
 @media only screen and (max-width: 81.25em) {
   .links {
-    top: 35%;
+    top: 35rem;
   }
 }
 .links__list {
@@ -592,7 +593,7 @@ a:link {
   display: none;
   width: 4.5rem;
   height: 0.4rem;
-  background-color: #fff;
+  background-color: #000;
   margin: 1rem 0;
 }
 @media only screen and (max-width: 81.25em) {
@@ -607,9 +608,14 @@ a:link {
     top: 5rem;
     right: 2rem;
     transition: scale 200ms ease;
+    border-radius: 2px;
+    background: #fed766;
+    box-shadow: 0 0 2rem #333;
+    padding: 0.5rem 1rem;
   }
   .burger-link:hover {
     scale: 1.1;
+    box-shadow: 0 0 3rem #333;
   }
 }
 
@@ -726,6 +732,11 @@ a:link {
 .myself__container-left {
   display: flex;
   flex-direction: column;
+}
+@media only screen and (max-width: 37.5em) {
+  .myself__container-left {
+    margin-top: 10rem;
+  }
 }
 .myself__img {
   width: 50rem;

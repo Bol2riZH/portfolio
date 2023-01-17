@@ -1,7 +1,12 @@
+@use '../abstract/mixins';
+
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+  @include mixins.respond(phone) {
+    margin: 0 5rem;
+  }
   &__side {
     display: flex;
     flex-direction: column;

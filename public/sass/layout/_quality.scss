@@ -53,6 +53,7 @@
     height: 50rem;
 
     @include mixins.respond(mid-desktop) {
+      margin-top: 5rem;
       width: 90%;
       height: 100%;
     }
@@ -73,6 +74,10 @@
       @include mixins.respond(mid-desktop) {
         flex-wrap: wrap;
       }
+      @include mixins.respond(phone) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 0.5rem;
+      }
     }
     &--item {
       display: flex;
@@ -83,6 +88,10 @@
       gap: 2rem;
       width: 3rem;
       height: 3rem;
+
+      @include mixins.respond(phone) {
+        display: none;
+      }
       img {
         object-fit: cover;
         width: 100%;

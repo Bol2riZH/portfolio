@@ -340,6 +340,11 @@ a:link {
   flex-direction: column;
   gap: 1.5rem;
 }
+@media only screen and (max-width: 37.5em) {
+  .form {
+    width: 100%;
+  }
+}
 .form__input {
   font-family: inherit;
   color: #191717;
@@ -661,14 +666,32 @@ a:link {
   align-items: center;
   gap: 2rem;
 }
+@media only screen and (max-width: 100em) {
+  .about__container {
+    flex-direction: column-reverse;
+  }
+}
 .about__paragraphes {
   max-width: 40%;
+}
+@media only screen and (max-width: 100em) {
+  .about__paragraphes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 6rem;
+    max-width: 100%;
+  }
 }
 .about__paragraphe {
   padding: 2rem 0;
 }
 .about__illustration {
-  height: 50rem;
+  width: 100%;
+}
+@media only screen and (max-width: 100em) {
+  .about__illustration {
+    width: 70%;
+  }
 }
 .about__illustration img {
   padding-bottom: 7rem;
@@ -676,11 +699,21 @@ a:link {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width: 100em) {
+  .about__illustration img {
+    padding-bottom: 0;
+  }
+}
 
 .contact {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media only screen and (max-width: 37.5em) {
+  .contact {
+    margin: 0 5rem;
+  }
 }
 .contact__side {
   display: flex;
@@ -852,6 +885,7 @@ a:link {
 }
 @media only screen and (max-width: 100em) {
   .quality__img {
+    margin-top: 5rem;
     width: 90%;
     height: 100%;
   }
@@ -873,6 +907,12 @@ a:link {
     flex-wrap: wrap;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .quality__skill--list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 0.5rem;
+  }
+}
 .quality__skill--item {
   display: flex;
   flex-direction: column;
@@ -882,6 +922,11 @@ a:link {
   gap: 2rem;
   width: 3rem;
   height: 3rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .quality__skill--img {
+    display: none;
+  }
 }
 .quality__skill--img img {
   object-fit: cover;
@@ -935,7 +980,7 @@ a:link {
   }
 }
 .section__quality, .section__about {
-  padding: 1rem 5rem;
+  padding: 3rem 5rem;
   border-radius: 2px;
 }
 .section__quality {
@@ -946,6 +991,11 @@ a:link {
 }
 .section__project {
   scroll-margin-top: 2rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .section__project {
+    padding: 0 5rem;
+  }
 }
 .section__contact {
   scroll-margin-top: 0;

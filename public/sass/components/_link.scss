@@ -14,20 +14,28 @@
   }
   @include mixins.respond(phone) {
     position: absolute;
+    top: 11rem;
   }
 
   &__list {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+
+    @include mixins.respond(phone) {
+      flex-direction: row;
+      gap: 5rem;
+    }
   }
   &__item {
     transition: all 200ms;
-    &:hover {
-      scale: 1.4;
-    }
-    &:active {
-      scale: 1.7;
+    @media (hover: hover) {
+      &:hover {
+        scale: 1.4;
+      }
+      &:active {
+        scale: 1.7;
+      }
     }
   }
 }
@@ -38,24 +46,25 @@
 .fa-github {
   transition: all 450ms;
 }
-
-.fa-envelope {
-  &:hover {
-    color: variables.$color-primary;
+@media (hover: hover) {
+  .fa-envelope {
+    &:hover {
+      color: variables.$color-primary;
+    }
   }
-}
-.fa-phone {
-  &:hover {
-    color: variables.$color-secondary;
+  .fa-phone {
+    &:hover {
+      color: variables.$color-secondary;
+    }
   }
-}
-.fa-linkedin-in {
-  &:hover {
-    color: variables.$color-tertiary;
+  .fa-linkedin-in {
+    &:hover {
+      color: variables.$color-tertiary;
+    }
   }
-}
-.fa-github {
-  &:hover {
-    color: variables.$color-primary;
+  .fa-github {
+    &:hover {
+      color: variables.$color-primary;
+    }
   }
 }

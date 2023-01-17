@@ -31,11 +31,13 @@
       font-size: variables.$big-font-size;
     }
 
-    &:hover {
-      padding-left: 2rem;
-      scale: 1.5;
-      color: variables.$color-secondary;
-      text-shadow: -0.4rem 0 0 variables.$color-primary;
+    @media (hover: hover) {
+      &:hover {
+        padding-left: 2rem;
+        scale: 1.5;
+        color: variables.$color-secondary;
+        text-shadow: -0.4rem 0 0 variables.$color-primary;
+      }
     }
   }
 }

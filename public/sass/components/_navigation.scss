@@ -88,20 +88,9 @@
   }
 }
 
-.burger-icon span {
-  display: none;
-  width: 4.5rem;
-  height: 0.4rem;
-  background-color: variables.$color-black;
-  margin: 1rem 0;
-
-  @include mixins.respond(tab-land) {
-    display: block;
-  }
-}
-
 .burger-link {
   @include mixins.respond(tab-land) {
+    z-index: 3;
     position: fixed;
     top: 5rem;
     right: 2rem;
@@ -112,9 +101,23 @@
     box-shadow: 0 0 2rem variables.$color-grey-dark-3;
     padding: 0.5rem 1rem;
 
-    &:hover {
-      scale: 1.1;
-      box-shadow: 0 0 3rem variables.$color-grey-dark-3;
+    @media (hover: hover) {
+      &:hover {
+        scale: 1.1;
+        box-shadow: 0 0 3rem variables.$color-grey-dark-3;
+      }
     }
+  }
+}
+
+.burger-icon span {
+  display: none;
+  width: 4.5rem;
+  height: 0.4rem;
+  background-color: variables.$color-black;
+  margin: 1rem 0;
+
+  @include mixins.respond(tab-land) {
+    display: block;
   }
 }

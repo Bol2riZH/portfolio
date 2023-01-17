@@ -15,7 +15,7 @@ a:link {
 }
 
 .header {
-  &__heading-title {
+  &__heading-title--fullName {
     text-transform: uppercase;
     font-size: variables.$XXL-font-size;
     font-weight: 900;
@@ -24,6 +24,28 @@ a:link {
 
     @include mixins.respond(mid-desktop) {
       font-size: variables.$large-font-size;
+    }
+    @include mixins.respond(phone) {
+      display: none;
+    }
+  }
+
+  &__heading-title--phoneName {
+    text-transform: uppercase;
+    font-size: variables.$XXL-font-size;
+    font-weight: 900;
+    color: variables.$color-secondary;
+    text-shadow: -0.4rem 0 0 variables.$color-primary;
+
+    @include mixins.respond(mid-desktop) {
+      font-size: variables.$large-font-size;
+    }
+
+    @media only screen and (min-width: 37.5em) {
+      display: none;
+    }
+    @include mixins.respond(phone) {
+      display: block;
     }
   }
 }
@@ -59,6 +81,10 @@ a:link {
 
 .links__item {
   font-size: variables.$big-font-size;
+
+  @include mixins.respond(phone) {
+    font-size: variables.$large-font-size;
+  }
 }
 
 .navigation__link {

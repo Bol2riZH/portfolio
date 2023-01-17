@@ -9,7 +9,7 @@
 
 .section {
   max-width: 114rem;
-  margin: 30rem auto;
+  margin: 25rem auto;
   scroll-margin-top: 2rem;
 
   @include mixins.respond(mid-desktop) {

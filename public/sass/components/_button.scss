@@ -9,19 +9,17 @@
   border-radius: 2px;
   font-size: variables.$medium-font-size;
   transition: all 250ms;
-  &:hover {
-    cursor: pointer;
-    translate: -2px -2px;
-    box-shadow: 2px 2px 0 variables.$color-white;
-  }
-  &:active &:focus {
-    translate: 2px 2px;
-    color: variables.$color-white;
-    box-shadow: none;
-  }
-  @media (hover: none) and (pointer: coarse) {
-    translate: 0;
-    color: variables.$color-grey-dark-4;
-    /* Add hover styles here */
+
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      translate: -2px -2px;
+      box-shadow: 2px 2px 0 variables.$color-white;
+    }
+    &:active &:focus {
+      translate: 2px 2px;
+      color: variables.$color-white;
+      box-shadow: none;
+    }
   }
 }

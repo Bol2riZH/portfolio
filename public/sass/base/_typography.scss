@@ -36,12 +36,20 @@ a:link {
   display: flex;
   flex-direction: column;
   margin-bottom: 3rem;
+
+  @include mixins.respond(phone) {
+    font-size: variables.$XXL-font-size;
+  }
 }
 
 .heading-secondary {
   color: variables.$color-secondary;
   font-size: variables.$large-font-size;
   font-weight: 900;
+
+  @include mixins.respond(phone) {
+    font-size: variables.$phone-heading-secondary-title-font-size;
+  }
 }
 
 .popup__paragraph {
@@ -84,18 +92,10 @@ a:link {
 
 .quality__list {
   font-size: variables.$medium-font-size;
-
-  @include mixins.respond(mid-desktop) {
-    font-size: variables.$default-font-size;
-  }
 }
 
 .quality__skill--list {
   font-size: variables.$medium-font-size;
-
-  @include mixins.respond(mid-desktop) {
-    font-size: variables.$default-font-size;
-  }
 }
 
 .card__link {
@@ -112,6 +112,11 @@ a:link {
   span {
     font-size: variables.$big-font-size;
   }
+}
+
+.form__input {
+  font-family: inherit;
+  font-size: variables.$medium-font-size;
 }
 
 .footer__copyright {

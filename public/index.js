@@ -55,6 +55,7 @@ document.addEventListener('scroll', () => {
   if (positionY > 137) {
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
+    navbarLink.classList.remove('hidden');
 
     if (window.screen.width > 1300) {
       navbar.classList.add('navigation__position--top');
@@ -69,6 +70,7 @@ document.addEventListener('scroll', () => {
     navbarList.classList.remove('navigation__position--column');
     navbarLink.classList.add('hidden');
     logo.classList.add('hidden');
+
     links.classList.remove('hidden');
     if (window.screen.width < 1300) {
       navbarList.classList.add('navigation__position--column');

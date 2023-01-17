@@ -1,7 +1,6 @@
 'use strict';
-const loaderTimeOut = 900;
-const popupTimeOut = 1000;
-const spamTimeOut = 1500;
+
+const timeOut = 900;
 const urlBase = 'https://portfolio-server-phi-three.vercel.app';
 
 const openBtn = document.querySelector('#openBtn');
@@ -40,7 +39,7 @@ window.addEventListener('load', () => {
   setTimeout(() => {
     loader.classList.add('loader--hidden');
     root.classList.remove('no-scroll');
-  }, loaderTimeOut);
+  }, timeOut);
   jobTitle.classList.add('appearing');
 });
 
@@ -87,7 +86,6 @@ const sendMail = async (mail) => {
       method: 'POST',
       body: mail,
     });
-    console.log(response);
 
     if (response) {
       loader.classList.add('loader--hidden');
@@ -103,7 +101,7 @@ const sendMail = async (mail) => {
       loader.insertAdjacentHTML('afterend', popup);
       setTimeout(() => {
         document.querySelector('.popup').remove();
-      }, popupTimeOut);
+      }, timeOut);
       form.reset();
     }
     if (response.statusText === 'Too Many Requests') {
@@ -115,7 +113,7 @@ const sendMail = async (mail) => {
       loader.insertAdjacentHTML('afterend', spam);
       setTimeout(() => {
         document.querySelector('.popup').remove();
-      }, spamTimeOut);
+      }, timeOut);
     } else {
       const error = `
           <div class="popup">
@@ -125,7 +123,7 @@ const sendMail = async (mail) => {
       loader.insertAdjacentHTML('afterend', error);
       setTimeout(() => {
         document.querySelector('.popup').remove();
-      }, popupTimeOut);
+      }, timeOut);
     }
   } catch (e) {
     console.error(e);
@@ -137,5 +135,5 @@ const form = document.querySelector('.form');
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   let mail = new FormData(form);
-  sendMail(mail);
+  sendMail(mail).catch();
 });

@@ -84,18 +84,27 @@ a:link {
   font-size: variables.$medium-font-size;
 }
 
-.card__description {
-  @include mixins.respond(tab-port) {
-    font-size: variables.$big-font-size;
-  }
+.quality__paragraphe {
+  color: variables.$color-grey-dark-4;
+  font-weight: 700;
 }
 
 .quality__list {
   font-size: variables.$medium-font-size;
+  color: variables.$color-grey-dark-4;
+  font-weight: 900;
 }
 
 .quality__skill--list {
   font-size: variables.$medium-font-size;
+  color: variables.$color-grey-dark-4;
+  font-weight: 900;
+}
+
+.card__description {
+  @include mixins.respond(tab-port) {
+    font-size: variables.$big-font-size;
+  }
 }
 
 .card__link {

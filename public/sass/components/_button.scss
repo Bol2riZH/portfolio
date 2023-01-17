@@ -16,7 +16,7 @@
       translate: -2px -2px;
       box-shadow: 2px 2px 0 variables.$color-white;
     }
-    &:active &:focus {
+    &:active {
       translate: 2px 2px;
       color: variables.$color-white;
       box-shadow: none;

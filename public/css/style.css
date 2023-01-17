@@ -143,7 +143,7 @@ a:link {
   font-size: 8rem;
   font-weight: 900;
   color: #fed65d;
-  text-shadow: -0.4rem 0 0 #fe3434;
+  text-shadow: -0.4rem 0 0 #fe4a49;
 }
 @media only screen and (max-width: 100em) {
   .header__heading-title--fullName {
@@ -160,7 +160,7 @@ a:link {
   font-size: 8rem;
   font-weight: 900;
   color: #fed65d;
-  text-shadow: -0.4rem 0 0 #fe3434;
+  text-shadow: -0.4rem 0 0 #fe4a49;
 }
 @media only screen and (max-width: 100em) {
   .header__heading-title--phoneName {
@@ -346,7 +346,7 @@ a:link {
     translate: -2px -2px;
     box-shadow: 2px 2px 0 #fff;
   }
-  .btn:active .btn:focus {
+  .btn:active {
     translate: 2px 2px;
     color: #fff;
     box-shadow: none;
@@ -413,7 +413,7 @@ a:link {
   border-bottom: 3px solid #007c8f;
 }
 .form__input:focus:invalid {
-  border-bottom: 3px solid #fe3434;
+  border-bottom: 3px solid #fe4a49;
 }
 .form__input::placeholder {
   color: #191717;
@@ -485,7 +485,7 @@ a:link {
 
 @media (hover: hover) {
   .fa-envelope:hover {
-    color: #fe3434;
+    color: #fe4a49;
   }
   .fa-phone:hover {
     color: #fed65d;
@@ -494,7 +494,7 @@ a:link {
     color: #007c8f;
   }
   .fa-github:hover {
-    color: #fe3434;
+    color: #fe4a49;
   }
 }
 .loader {
@@ -844,7 +844,7 @@ a:link {
     padding-left: 2rem;
     scale: 1.5;
     color: #fed65d;
-    text-shadow: -0.4rem 0 0 #fe3434;
+    text-shadow: -0.4rem 0 0 #fe4a49;
   }
 }
 
@@ -1057,7 +1057,7 @@ a:link {
   border-radius: 2px;
 }
 .section__quality {
-  background-color: #fe3434;
+  background-color: #fe4a49;
 }
 .section__about {
   background-color: #007c8f;

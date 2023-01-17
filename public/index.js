@@ -16,7 +16,6 @@ const logo = document.querySelector('.header__logo');
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
 const navbarLink = document.querySelector('.navigation__link');
-const navBurger = document.querySelector('.burger-link');
 
 const links = document.querySelector('.links');
 
@@ -56,15 +55,11 @@ document.addEventListener('scroll', () => {
   if (positionY > 137) {
     logo.classList.remove('hidden');
     logo.classList.add('header__animation');
-    navbarLink.classList.remove('hidden');
 
     if (window.screen.width > 1300) {
       navbar.classList.add('navigation__position--top');
       navbar.classList.add('navigation__animation--appearing');
       navbarList.classList.add('navigation__position--column');
-    }
-    if (window.screen.width < 900) {
-      links.classList.add('hidden');
     }
   }
 

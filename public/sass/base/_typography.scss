@@ -49,6 +49,10 @@ a:link {
   font-size: variables.$big-font-size;
 }
 
+.links__item {
+  font-size: variables.$big-font-size;
+}
+
 .navigation__link {
   font-size: variables.$medium-font-size;
 
@@ -80,10 +84,18 @@ a:link {
 
 .quality__list {
   font-size: variables.$medium-font-size;
+
+  @include mixins.respond(mid-desktop) {
+    font-size: variables.$default-font-size;
+  }
 }
 
 .quality__skill--list {
   font-size: variables.$medium-font-size;
+
+  @include mixins.respond(mid-desktop) {
+    font-size: variables.$default-font-size;
+  }
 }
 
 .card__link {

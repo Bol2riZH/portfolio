@@ -1,10 +1,9 @@
 @use '../abstract/variables';
 @use '../abstract/mixins';
 
-.main {
-  @include mixins.respond(tab-land) {
-    display: flex;
-    flex-direction: column;
+.heading-secondary {
+  @include mixins.respond(phone) {
+    text-align: center;
   }
 }
 
@@ -19,6 +18,10 @@
 
   @include mixins.respond(tab-land) {
     margin: 20rem 10rem;
+  }
+  @include mixins.respond(phone) {
+    margin: 10rem auto;
+    width: 100%;
   }
 
   &__myself {

@@ -307,6 +307,10 @@ a:link {
   color: #191717;
 }
 
+.btn {
+  font-size: 2rem;
+}
+
 .center {
   max-width: 144rem;
   margin: 0 auto;
@@ -352,8 +356,14 @@ a:link {
   text-transform: uppercase;
   background-color: #fed65d;
   border-radius: 2px;
-  font-size: 2rem;
   transition: all 250ms;
+}
+@media (hover: none) and (pointer: coarse) {
+  .btn {
+    color: #191717;
+    text-decoration: none;
+    box-shadow: none;
+  }
 }
 @media (hover: hover) {
   .btn:hover {

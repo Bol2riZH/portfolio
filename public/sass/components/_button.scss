@@ -7,9 +7,13 @@
   text-transform: uppercase;
   background-color: variables.$color-secondary;
   border-radius: 2px;
-  font-size: variables.$medium-font-size;
   transition: all 250ms;
 
+  @media (hover: none) and (pointer: coarse) {
+    color: variables.$color-grey-dark-4;
+    text-decoration: none;
+    box-shadow: none;
+  }
   @media (hover: hover) {
     &:hover {
       cursor: pointer;

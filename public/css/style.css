@@ -475,6 +475,11 @@ a:link {
     top: 35rem;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .links {
+    top: 18rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .links {
     position: absolute;

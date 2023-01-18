@@ -39,7 +39,6 @@
       variables.$color-secondary 65%
     );
     border-bottom-right-radius: 2px;
-
     @include mixins.respond(tab-land) {
       flex-direction: column;
       height: 100%;

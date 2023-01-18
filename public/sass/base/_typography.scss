@@ -127,14 +127,23 @@ a:link {
   font-weight: 900;
 }
 
+.card__title {
+  font-size: variables.$big-font-size;
+  @media (hover: none) and (pointer: coarse) {
+    color: variables.$color-secondary;
+  }
+}
+
 .card__description {
   @include mixins.respond(tab-port) {
     font-size: variables.$big-font-size;
   }
-}
-
-.card__link {
-  font-size: variables.$big-font-size;
+  @include mixins.respond(phone) {
+    font-size: variables.$medium-font-size;
+  }
+  @media (hover: none) and (pointer: coarse) {
+    margin-top: 2rem;
+  }
 }
 
 .card__description--techno {

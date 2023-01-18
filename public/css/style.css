@@ -259,14 +259,29 @@ a:link {
   font-weight: 900;
 }
 
+.card__title {
+  font-size: 3rem;
+}
+@media (hover: none) and (pointer: coarse) {
+  .card__title {
+    color: #fed65d;
+  }
+}
+
 @media only screen and (max-width: 56.25em) {
   .card__description {
     font-size: 3rem;
   }
 }
-
-.card__link {
-  font-size: 3rem;
+@media only screen and (max-width: 37.5em) {
+  .card__description {
+    font-size: 2rem;
+  }
+}
+@media (hover: none) and (pointer: coarse) {
+  .card__description {
+    margin-top: 2rem;
+  }
 }
 
 .card__description--techno {
@@ -358,19 +373,21 @@ a:link {
   transition: all 300ms;
   z-index: 1;
 }
-.card:hover {
-  scale: 1.03;
-}
-.card:hover .card__description {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  padding: 2rem;
-  position: absolute;
-  top: 5rem;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(25, 23, 23, 0.9);
+@media (hover: hover) {
+  .card:hover {
+    scale: 1.03;
+  }
+  .card:hover .card__description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    position: absolute;
+    top: 5rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 23, 23, 0.9);
+  }
 }
 .card__img {
   height: 30rem;
@@ -382,10 +399,11 @@ a:link {
   height: 100%;
 }
 
-.card__description {
-  display: none;
+@media (hover: hover) {
+  .card__description {
+    display: none;
+  }
 }
-
 .form {
   margin-top: 2rem;
   width: 50%;

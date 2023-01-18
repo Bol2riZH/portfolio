@@ -11,7 +11,6 @@ const PORT = process.env.PORT || 5000;
 const app = express();
 
 app.use(cors({ origin: '*' }));
-
 app.use('/public', express.static(process.cwd() + '/public'));
 
 app.listen(PORT, () => {
@@ -22,6 +21,7 @@ app.route('/').get(function (req, res) {
   res.sendFile(process.cwd() + '/public/index.html');
 });
 
+// NODEMAILER CONFIGURATION
 const transporter = nodemailer.createTransport({
   host: 'smtp-mail.outlook.com',
   port: 587,
@@ -44,6 +44,7 @@ const rateLimit = rateLimitConfig({
   legacyHeaders: false,
 });
 
+// SENDING EMAIL
 app.post('/send', rateLimit, (req, res) => {
   const form = new multiparty.Form();
   const data = {};

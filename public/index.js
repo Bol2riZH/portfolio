@@ -1,23 +1,124 @@
 'use strict';
 
 const timeOut = 900;
+const scrollLimit = 137;
+const screenWidthLimit = 1300;
 const urlBase = 'https://portfolio-server-phi-three.vercel.app';
 
-const openBtn = document.querySelector('#openBtn');
-const closeBtn = document.querySelector('#closeBtn');
+const messageSend = `
+          <div class="popup">
+            <p class="popup__paragraph">Message reçu !</p>
+          </div>`;
+
+const spam = `
+          <div class="popup">
+            <p class="popup__paragraph">Alerte au spam ! </br> Merci de patientez 30 sec...</p>
+          </div>`;
+
+const error = `
+          <div class="popup">
+            <p class="popup__paragraph">Erreur...</p>
+          </div>`;
 
 const root = document.getElementsByTagName('html')[0];
 const loader = document.querySelector('.loader');
-const jobTitle = document.querySelector('.heading-primary');
 
+const jobTitle = document.querySelector('.heading-primary');
 const logo = document.querySelector('.header__logo');
+
+const links = document.querySelector('.links');
 
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
 const navbarLink = document.querySelector('.navigation__link');
+const openBtn = document.querySelector('#openBtn');
+const closeBtn = document.querySelector('#closeBtn');
 
-const links = document.querySelector('.links');
+const form = document.querySelector('.form');
 
+const isExceedingLimit = (number, limit) => {
+  return number > limit;
+};
+
+const setLoaderPopup = () => {
+  loader.classList.remove('loader--hidden');
+  loader.style.backgroundColor = 'rgba(25, 23, 23, 0.8)';
+  root.classList.add('no-scroll');
+};
+
+const hideLoader = () => {
+  loader.classList.add('loader--hidden');
+  root.classList.remove('no-scroll');
+};
+
+const setResponsePopup = (elementPlace, responseMessage) => {
+  elementPlace.insertAdjacentHTML('afterend', responseMessage);
+  return document.querySelector('.popup');
+};
+
+const removeElementAfterDelay = (element, delay) => {
+  setTimeout(() => {
+    element.remove();
+  }, delay);
+};
+
+// LOADER
+window.addEventListener('load', () => {
+  window.scrollTo(0, 0);
+  root.classList.add('no-scroll');
+  setTimeout(() => {
+    hideLoader();
+  }, timeOut);
+  jobTitle.classList.add('appearing');
+});
+
+window.addEventListener('resize', () => {
+  const screenSize = window.screen.width;
+
+  !isExceedingLimit(screenSize, screenWidthLimit) &&
+    navbarList.classList.add('navigation__position--column');
+});
+
+// ANIMATION ON SCROLL
+document.addEventListener('scroll', () => {
+  const screenSize = window.screen.width;
+  const scrollPosition = window.scrollY;
+
+  if (isExceedingLimit(scrollPosition, scrollLimit)) {
+    logo.classList.remove('hidden');
+    logo.classList.add('header__animation');
+
+    navbarLink.classList.remove('hidden');
+
+    if (isExceedingLimit(screenSize, screenWidthLimit)) {
+      navbar.classList.add('navigation__position--top');
+      navbar.classList.add('navigation__animation--appearing');
+      navbarList.classList.add('navigation__position--column');
+    }
+  }
+});
+
+document.addEventListener('scroll', () => {
+  const screenSize = window.screen.width;
+  const scrollPosition = window.scrollY;
+
+  if (!isExceedingLimit(scrollPosition, scrollLimit)) {
+    logo.classList.add('hidden');
+
+    navbar.classList.remove('navigation__position--top');
+    navbar.classList.remove('navigation__animation--appearing');
+    navbarList.classList.remove('navigation__position--column');
+    navbarLink.classList.add('hidden');
+
+    links.classList.remove('hidden');
+
+    if (!isExceedingLimit(screenSize, screenWidthLimit)) {
+      navbarList.classList.add('navigation__position--column');
+    }
+  }
+});
+
+// BURGER MENU
 const openNav = () => {
   navbar.classList.add('active');
   closeBtn.classList.remove('hidden');
@@ -33,107 +134,33 @@ const closeNav = () => {
 closeBtn.onclick = closeNav;
 navbarList.onclick = closeNav;
 
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-  root.classList.add('no-scroll');
-  setTimeout(() => {
-    loader.classList.add('loader--hidden');
-    root.classList.remove('no-scroll');
-  }, timeOut);
-  jobTitle.classList.add('appearing');
-});
-
-window.addEventListener('resize', () => {
-  if (window.screen.width < 1300) {
-    navbarList.classList.add('navigation__position--column');
-  }
-});
-
-document.addEventListener('scroll', () => {
-  const positionY = window.scrollY;
-  if (positionY > 137) {
-    logo.classList.remove('hidden');
-    logo.classList.add('header__animation');
-    navbarLink.classList.remove('hidden');
-
-    if (window.screen.width > 1300) {
-      navbar.classList.add('navigation__position--top');
-      navbar.classList.add('navigation__animation--appearing');
-      navbarList.classList.add('navigation__position--column');
-    }
-  }
-
-  if (positionY < 137) {
-    navbar.classList.remove('navigation__position--top');
-    navbar.classList.remove('navigation__animation--appearing');
-    navbarList.classList.remove('navigation__position--column');
-    navbarLink.classList.add('hidden');
-    logo.classList.add('hidden');
-
-    links.classList.remove('hidden');
-    if (window.screen.width < 1300) {
-      navbarList.classList.add('navigation__position--column');
-    }
-  }
-});
-
+// SEND MAIL
 const sendMail = async (mail) => {
-  loader.classList.remove('loader--hidden');
-  loader.style.backgroundColor = 'rgba(25, 23, 23, 0.8)';
-  root.classList.add('no-scroll');
+  setLoaderPopup();
   try {
     const response = await fetch(`${urlBase}/send`, {
       method: 'POST',
       body: mail,
     });
-
     if (response) {
-      loader.classList.add('loader--hidden');
-      root.classList.remove('no-scroll');
+      hideLoader();
     }
-
     if (response.ok) {
-      const popup = `
-          <div class="popup">
-            <p class="popup__paragraph">Message reçu !</p>
-          </div>`;
-
-      loader.insertAdjacentHTML('afterend', popup);
-      setTimeout(() => {
-        document.querySelector('.popup').remove();
-      }, timeOut);
+      removeElementAfterDelay(setResponsePopup(loader, messageSend), timeOut);
       form.reset();
     }
     if (response.statusText === 'Too Many Requests') {
-      const spam = `
-          <div class="popup">
-            <p class="popup__paragraph">Alerte au spam ! </br> Merci de patientez 30 sec...</p>
-          </div>`;
-
-      loader.insertAdjacentHTML('afterend', spam);
-      setTimeout(() => {
-        document.querySelector('.popup').remove();
-      }, timeOut);
+      removeElementAfterDelay(setResponsePopup(loader, spam), timeOut);
     } else {
-      const error = `
-          <div class="popup">
-            <p class="popup__paragraph">Erreur...</p>
-          </div>`;
-
-      loader.insertAdjacentHTML('afterend', error);
-      setTimeout(() => {
-        document.querySelector('.popup').remove();
-      }, timeOut);
+      removeElementAfterDelay(setResponsePopup(loader, error), timeOut);
     }
   } catch (e) {
     console.error(e);
   }
 };
 
-const form = document.querySelector('.form');
-
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  let mail = new FormData(form);
+  const mail = new FormData(form);
   sendMail(mail).catch();
 });

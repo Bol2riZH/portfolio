@@ -13,7 +13,7 @@
     top: 35rem;
   }
   @include mixins.respond(tab-port) {
-    top: 18rem;
+    top: 11rem;
   }
   @include mixins.respond(phone) {
     position: absolute;

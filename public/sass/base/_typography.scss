@@ -87,6 +87,14 @@ a:link {
   }
 }
 
+.links__link--cv {
+  font-size: variables.$big-font-size;
+  font-weight: 900;
+  @include mixins.respond(phone) {
+    font-size: variables.$large-font-size;
+  }
+}
+
 .navigation__link {
   font-size: variables.$medium-font-size;
 

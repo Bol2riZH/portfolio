@@ -41,12 +41,22 @@
       }
     }
   }
+  &__link--cv {
+    position: relative;
+    right: 0.4rem;
+    bottom: 0.7rem;
+    @include mixins.respond(phone) {
+      right: 0;
+      bottom: 0;
+    }
+  }
 }
 
 .fa-envelope,
 .fa-phone,
 .fa-linkedin-in,
-.fa-github {
+.fa-github,
+.links__link--cv {
   transition: all 450ms;
 }
 @media (hover: hover) {
@@ -68,6 +78,11 @@
   .fa-github {
     &:hover {
       color: variables.$color-primary;
+    }
+  }
+  .links__link--cv {
+    &:hover {
+      color: variables.$color-secondary;
     }
   }
 }

@@ -218,6 +218,16 @@ a:link {
   }
 }
 
+.links__link--cv {
+  font-size: 3rem;
+  font-weight: 900;
+}
+@media only screen and (max-width: 37.5em) {
+  .links__link--cv {
+    font-size: 6rem;
+  }
+}
+
 .navigation__link {
   font-size: 2rem;
 }
@@ -508,11 +518,23 @@ a:link {
     scale: 1.7;
   }
 }
+.links__link--cv {
+  position: relative;
+  right: 0.4rem;
+  bottom: 0.7rem;
+}
+@media only screen and (max-width: 37.5em) {
+  .links__link--cv {
+    right: 0;
+    bottom: 0;
+  }
+}
 
 .fa-envelope,
 .fa-phone,
 .fa-linkedin-in,
-.fa-github {
+.fa-github,
+.links__link--cv {
   transition: all 450ms;
 }
 
@@ -528,6 +550,9 @@ a:link {
   }
   .fa-github:hover {
     color: #fe4a49;
+  }
+  .links__link--cv:hover {
+    color: #fed65d;
   }
 }
 .loader {

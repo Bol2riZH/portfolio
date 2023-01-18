@@ -44,6 +44,12 @@
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 10rem;
     }
+
+    @include mixins.respond(tab-port) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 4rem;
+    }
+
     @include mixins.respond(phone) {
       display: flex;
     }

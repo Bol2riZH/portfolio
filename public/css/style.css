@@ -975,6 +975,12 @@ a:link {
     grid-column-gap: 10rem;
   }
 }
+@media only screen and (max-width: 56.25em) {
+  .quality__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4rem;
+  }
+}
 @media only screen and (max-width: 37.5em) {
   .quality__list {
     display: flex;

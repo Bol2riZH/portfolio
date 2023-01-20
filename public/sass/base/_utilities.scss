@@ -37,3 +37,7 @@
   font-size: 6rem !important;
   font-weight: 900;
 }
+
+.burger__low-opacity {
+  background-color: rgba(variables.$color-secondary, 0.6) !important;
+}

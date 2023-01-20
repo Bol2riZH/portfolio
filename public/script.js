@@ -32,6 +32,7 @@ const links = document.querySelector('.links');
 const navbar = document.querySelector('.navigation');
 const navbarList = document.querySelector('.navigation__list');
 const navbarLink = document.querySelector('.navigation__link');
+const burgerMenu = document.querySelector('.burger-link');
 const openBtn = document.querySelector('#openBtn');
 const closeBtn = document.querySelector('#closeBtn');
 const form = document.querySelector('.form');
@@ -78,6 +79,7 @@ document.addEventListener('scroll', () => {
         logo.classList.remove('hidden');
         logo.classList.add('header__animation');
         navbarLink.classList.remove('hidden');
+        burgerMenu.classList.add('burger__low-opacity');
         if (isExceedingLimit(screenSize, screenWidthLimit)) {
             navbar.classList.add('navigation__position--top');
             navbar.classList.add('navigation__animation--appearing');
@@ -95,6 +97,7 @@ document.addEventListener('scroll', () => {
         navbarList.classList.remove('navigation__position--column');
         navbarLink.classList.add('hidden');
         links.classList.remove('hidden');
+        burgerMenu.classList.remove('burger__low-opacity');
         if (!isExceedingLimit(screenSize, screenWidthLimit)) {
             navbarList.classList.add('navigation__position--column');
         }

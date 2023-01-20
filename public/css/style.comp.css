@@ -359,6 +359,10 @@ a:link {
   font-weight: 900;
 }
 
+.burger__low-opacity {
+  background-color: rgba(254, 214, 93, 0.6) !important;
+}
+
 .btn {
   width: fit-content;
   padding: 1.5rem 3rem;
@@ -897,6 +901,11 @@ a:link {
     font-size: 3rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .header__logo {
+    display: none;
+  }
+}
 @media (hover: hover) {
   .header__logo:hover {
     padding-left: 2rem;
@@ -1067,7 +1076,6 @@ a:link {
 }
 .quality__skill--img img {
   object-fit: cover;
-  width: 100%;
   height: 100%;
 }
 

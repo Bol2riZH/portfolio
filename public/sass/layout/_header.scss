@@ -30,6 +30,9 @@
     @include mixins.respond(tab-land) {
       font-size: variables.$big-font-size;
     }
+    @include mixins.respond(phone) {
+      display: none;
+    }
 
     @media (hover: hover) {
       &:hover {

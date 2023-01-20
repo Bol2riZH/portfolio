@@ -41,6 +41,8 @@ const navbarLink = document.querySelector(
   '.navigation__link'
 ) as HTMLAnchorElement;
 
+const burgerMenu = document.querySelector('.burger-link') as HTMLAnchorElement;
+
 const openBtn = document.querySelector('#openBtn') as HTMLAnchorElement;
 const closeBtn = document.querySelector('#closeBtn') as HTMLAnchorElement;
 
@@ -103,6 +105,8 @@ document.addEventListener('scroll', () => {
 
     navbarLink.classList.remove('hidden');
 
+    burgerMenu.classList.add('burger__low-opacity');
+
     if (isExceedingLimit(screenSize, screenWidthLimit)) {
       navbar.classList.add('navigation__position--top');
       navbar.classList.add('navigation__animation--appearing');
@@ -124,6 +128,8 @@ document.addEventListener('scroll', () => {
     navbarLink.classList.add('hidden');
 
     links.classList.remove('hidden');
+
+    burgerMenu.classList.remove('burger__low-opacity');
 
     if (!isExceedingLimit(screenSize, screenWidthLimit)) {
       navbarList.classList.add('navigation__position--column');
